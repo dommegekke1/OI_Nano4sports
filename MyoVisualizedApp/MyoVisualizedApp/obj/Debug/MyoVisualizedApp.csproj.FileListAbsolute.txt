@@ -31,3 +31,12 @@ C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\Myo
 C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
 C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
 C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojResolveAssemblyReference.cache
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
