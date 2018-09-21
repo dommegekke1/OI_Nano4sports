@@ -21,12 +21,43 @@ namespace MyoVisualizedApp
         const float upperThreshold = 120;
         const float lowerThreshold = 120;
         bool aboveUpperThresholdValue = false;
+        string SelectedAxis = "gyro"; // gyro as default
 
         int stepCounter = 0;
 
         public char SplitChar = ',';
         public float roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z;
         int simTimer = 0;
+
+        public Form1()
+        {
+            InitializeComponent();
+            //type setting buttons
+            rbtnGyro.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
+            rbtnAccel.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
+            rbtnRotation.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
+        }
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is RadioButton)
+            {
+                RadioButton radioButton = (RadioButton)sender;
+                //Gyro
+                if (rbtnGyro.Checked)
+                {
+                    SelectedAxis = "gyro";
+                }
+                else if (rbtnAccel.Checked)
+                {
+                    SelectedAxis = "accel";
+                }
+                else if (rbtnRotation.Checked)
+                {
+                    SelectedAxis = "rotation";
+                }
+            }
+        }
 
         private void startTime_Tick(object sender, EventArgs e)
         {
@@ -39,7 +70,24 @@ namespace MyoVisualizedApp
                 {
                     if(a.time < simTimer + 10 && a.time > simTimer)
                     {
-                        dataGraph.Series["Roll"].Points.AddXY(a.time, a.gyro_z);
+                        if(SelectedAxis == "gyro")
+                        {
+                            dataGraph.Series["Series1"].Points.AddXY(a.time, a.gyro_x);
+                            dataGraph.Series["Series2"].Points.AddXY(a.time, a.gyro_y);
+                            dataGraph.Series["Series3"].Points.AddXY(a.time, a.gyro_z);
+                        }
+                        else if(SelectedAxis == "accel")
+                        {
+                            dataGraph.Series["Series1"].Points.AddXY(a.time, a.accel_x);
+                            dataGraph.Series["Series2"].Points.AddXY(a.time, a.accel_y);
+                            dataGraph.Series["Series3"].Points.AddXY(a.time, a.accel_z);
+                        }
+                        else if(SelectedAxis == "rotation")
+                        {
+                            dataGraph.Series["Series1"].Points.AddXY(a.time, a.roll);
+                            dataGraph.Series["Series2"].Points.AddXY(a.time, a.pitch);
+                            dataGraph.Series["Series3"].Points.AddXY(a.time, a.yaw);
+                        }
 
                         if (a.gyro_z > upperThreshold && !aboveUpperThresholdValue)
                         {
@@ -55,7 +103,6 @@ namespace MyoVisualizedApp
                 }
                 label2.Text = stepCounter + "";
             }
-            //label1.Text = startTime.Tick();
         }
 
         public Int32 time;
@@ -64,23 +111,8 @@ namespace MyoVisualizedApp
         {
             startTime.Start();
             dataTrackBar.Minimum = 0;
-            dataTrackBar.Maximum = runData.Last().time+10;
-            /*
-            foreach (Sample a in runData)
-            {
-
-                if(a.time.ToString() == startTime.ToString())
-                {
-                    MessageBox.Show("Test");
-                }
-            }
-            */
-        }
-
-        public Form1()
-        {
-            InitializeComponent();
-        }  
+            dataTrackBar.Maximum = runData.Last().time + 10;
+        } 
 
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
@@ -93,9 +125,14 @@ namespace MyoVisualizedApp
                 {
                     sFileName = openFileDialog.FileName;
                 }
-
-                dataGraph.Series.Add("Roll");
-                dataGraph.Series["Roll"].ChartType = SeriesChartType.Line;
+                /*
+                dataGraph.Series.Add("Gyroscope");
+                dataGraph.Series["Gyroscope"].ChartType = SeriesChartType.Line;
+                dataGraph.Series.Add("Acceleration");
+                dataGraph.Series["Acceleration"].ChartType = SeriesChartType.Line;
+                dataGraph.Series.Add("Rotation");
+                dataGraph.Series["Rotation"].ChartType = SeriesChartType.Line;
+                */
                 StreamReader reader = new StreamReader(sFileName);
                 while (reader.Peek() > -1)
                 {
@@ -122,11 +159,23 @@ namespace MyoVisualizedApp
                         runData.Add(sampleData);
                     }
                 }
-                dataGraph.Series["Roll"].ChartArea = "ChartArea1";
-                dataGraph.ChartAreas[0].AxisY.Minimum = -300;
-                dataGraph.ChartAreas[0].AxisY.Maximum = 300;
+                //set ChartAreas
+                dataGraph.Series["Gyro"].ChartArea = "GyroArea";
+                dataGraph.Series["Accel"].ChartArea = "AccelArea";
+                dataGraph.Series["Rotation"].ChartArea = "RotationArea";
+                //Set axis min/max for all 3 graphs
+                //Gyro
+                dataGraph.ChartAreas["GyroArea"].AxisY.Minimum = -300;
+                dataGraph.ChartAreas["GyroArea"].AxisY.Maximum = 300;
+                //Accel
+                dataGraph.ChartAreas["AccelArea"].AxisY.Minimum = -300;
+                dataGraph.ChartAreas["AccelArea"].AxisY.Maximum = 300;
+                //Rotation
+                dataGraph.ChartAreas["RotationArea"].AxisY.Minimum = -2;
+                dataGraph.ChartAreas["RotationArea"].AxisY.Maximum = 2;
+                //base X line based on maximum time
                 dataGraph.ChartAreas[0].AxisX.Minimum = 0;
-                dataGraph.ChartAreas[0].AxisX.Maximum = runData.Last().time+10;
+                dataGraph.ChartAreas[0].AxisX.Maximum = runData.Last().time;
             }
             catch (Exception)
             {
