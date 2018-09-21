@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataTrackBar = new System.Windows.Forms.TrackBar();
             this.dataLoadBtn = new System.Windows.Forms.Button();
             this.dataGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -39,6 +39,7 @@
             this.btnStartSimulation = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.serialPort = new System.IO.Ports.SerialPort(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGraph)).BeginInit();
             this.SuspendLayout();
@@ -64,16 +65,16 @@
             // 
             // dataGraph
             // 
-            chartArea6.Name = "ChartArea1";
-            this.dataGraph.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.dataGraph.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.dataGraph.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.dataGraph.Legends.Add(legend1);
             this.dataGraph.Location = new System.Drawing.Point(-1, -3);
             this.dataGraph.Name = "dataGraph";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.dataGraph.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.dataGraph.Series.Add(series1);
             this.dataGraph.Size = new System.Drawing.Size(701, 249);
             this.dataGraph.TabIndex = 2;
             this.dataGraph.Text = "chart1";
@@ -140,6 +141,7 @@
         private System.Windows.Forms.Button btnStartSimulation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.IO.Ports.SerialPort serialPort;
     }
 }
 
