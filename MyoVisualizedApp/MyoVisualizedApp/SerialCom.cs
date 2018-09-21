@@ -13,7 +13,6 @@ namespace MyoVisualizedApp
 
         public SerialCom()
         {
-            
         }
 
         public String[] GetPorts()
@@ -21,9 +20,10 @@ namespace MyoVisualizedApp
             return SerialPort.GetPortNames();
         }
 
-        public void OpenPort(SerialPort serialPort, int baudRate)
+        public void OpenPort(SerialPort serialPort, int baudRate, string portname)
         {
             SerialPort = serialPort;
+            SerialPort.PortName = portname;
             SerialPort.BaudRate = baudRate;
             SerialPort.Open();
         }
@@ -35,7 +35,8 @@ namespace MyoVisualizedApp
 
         public string Read()
         {
-            return SerialPort.ReadLine();
+            string a = SerialPort.ReadLine();
+            return a;
         }
 
         public void Write(string text)

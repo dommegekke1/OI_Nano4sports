@@ -40,3 +40,13 @@ C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj
 C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
 C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
 C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojAssemblyReference.cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CoreCompileInputs.cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb

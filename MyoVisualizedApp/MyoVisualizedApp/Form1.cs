@@ -10,7 +10,7 @@ using System.Threading;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
+using System.IO.Ports;
 
 
 namespace MyoVisualizedApp
@@ -22,11 +22,16 @@ namespace MyoVisualizedApp
         const float lowerThreshold = 120;
         bool aboveUpperThresholdValue = false;
         string SelectedAxis = "gyro"; // gyro as default
+        SerialCom serCom = new SerialCom();
+
+        bool liveData = false;
 
         int stepCounter = 0;
 
-        public char SplitChar = ',';
+        public char SplitChar = ' ';
         public float roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z;
+
+
         int simTimer = 0;
 
         public Form1()
@@ -36,8 +41,23 @@ namespace MyoVisualizedApp
             rbtnGyro.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
             rbtnAccel.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
             rbtnRotation.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
+
+            getAvailablePorts();
         }
 
+        void getAvailablePorts()
+        {
+            String[] ports = SerialPort.GetPortNames();
+            comboBox1.Items.AddRange(ports);
+        }
+
+        private void btnLive_Click(object sender, EventArgs e)
+        {
+            string portname = comboBox1.Text;
+            serCom.OpenPort(serialPort, 115200, portname);
+            startTime.Start();
+            liveData = true;           
+        }
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (sender is RadioButton)
@@ -61,49 +81,94 @@ namespace MyoVisualizedApp
 
         private void startTime_Tick(object sender, EventArgs e)
         {
-            if(simTimer < runData.Last().time)
+            /*else
             {
-                simTimer += 10;
-                label1.Text = simTimer + "";
-                dataTrackBar.Value = simTimer;
-                foreach(Sample a in runData)
+                if (simTimer < runData.Last().time)
                 {
-                    if(a.time < simTimer + 10 && a.time > simTimer)
+                    simTimer += 10;
+                    label1.Text = simTimer + "";
+                    dataTrackBar.Value = simTimer;
+                    foreach (Sample a in runData)
                     {
-                        if(SelectedAxis == "gyro")
+                        if (a.time < simTimer + 10 && a.time > simTimer)
                         {
-                            dataGraph.Series["Series1"].Points.AddXY(a.time, a.gyro_x);
-                            dataGraph.Series["Series2"].Points.AddXY(a.time, a.gyro_y);
-                            dataGraph.Series["Series3"].Points.AddXY(a.time, a.gyro_z);
-                        }
-                        else if(SelectedAxis == "accel")
-                        {
-                            dataGraph.Series["Series1"].Points.AddXY(a.time, a.accel_x);
-                            dataGraph.Series["Series2"].Points.AddXY(a.time, a.accel_y);
-                            dataGraph.Series["Series3"].Points.AddXY(a.time, a.accel_z);
-                        }
-                        else if(SelectedAxis == "rotation")
-                        {
-                            dataGraph.Series["Series1"].Points.AddXY(a.time, a.roll);
-                            dataGraph.Series["Series2"].Points.AddXY(a.time, a.pitch);
-                            dataGraph.Series["Series3"].Points.AddXY(a.time, a.yaw);
-                        }
+                            if (SelectedAxis == "gyro")
+                            {
+                                dataGraph.Series["Series1"].Points.AddXY(a.time, a.gyro_x);
+                                dataGraph.Series["Series2"].Points.AddXY(a.time, a.gyro_y);
+                                dataGraph.Series["Series3"].Points.AddXY(a.time, a.gyro_z);
+                            }
+                            else if (SelectedAxis == "accel")
+                            {
+                                dataGraph.Series["Series1"].Points.AddXY(a.time, a.accel_x);
+                                dataGraph.Series["Series2"].Points.AddXY(a.time, a.accel_y);
+                                dataGraph.Series["Series3"].Points.AddXY(a.time, a.accel_z);
+                            }
+                            else if (SelectedAxis == "rotation")
+                            {
+                                dataGraph.Series["Series1"].Points.AddXY(a.time, a.roll);
+                                dataGraph.Series["Series2"].Points.AddXY(a.time, a.pitch);
+                                dataGraph.Series["Series3"].Points.AddXY(a.time, a.yaw);
+                            }
 
-                        if (a.gyro_z > upperThreshold && !aboveUpperThresholdValue)
-                        {
-                            aboveUpperThresholdValue = true;
-                            stepCounter++;
-                        }
-                        else if (a.gyro_z < upperThreshold && aboveUpperThresholdValue)
-                        {
-                            aboveUpperThresholdValue = false;
-                            stepCounter++;
+                            if (a.gyro_z > upperThreshold && !aboveUpperThresholdValue)
+                            {
+                                aboveUpperThresholdValue = true;
+                                stepCounter++;
+                            }
+                            else if (a.gyro_z < upperThreshold && aboveUpperThresholdValue)
+                            {
+                                aboveUpperThresholdValue = false;
+                                stepCounter++;
+                            }
                         }
                     }
+                    label2.Text = stepCounter + "";
                 }
-                label2.Text = stepCounter + "";
+            }*/
+            if (liveData)
+            {
+                string DataLineLive = serialPort.ReadLine();
+
+                string[] singleLine = DataLineLive.Split(SplitChar);
+                float.TryParse(singleLine[0], out roll);
+                float.TryParse(singleLine[1], out pitch);
+                float.TryParse(singleLine[2], out yaw);
+                float.TryParse(singleLine[3], out gyro_x);
+                float.TryParse(singleLine[4], out gyro_y);
+                float.TryParse(singleLine[5], out gyro_z);
+                float.TryParse(singleLine[6], out accel_x);
+                float.TryParse(singleLine[7], out accel_y);
+                float.TryParse(singleLine[8], out accel_z);
+                Int32.TryParse(singleLine[3], out time);
+
+                Sample sampleData = new Sample(roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, time);
+                runData.Add(sampleData);
+
+                dataGraph.ChartAreas[0].AxisX.Minimum = runData.Last().time - 11000;
+                dataGraph.ChartAreas[1].AxisX.Minimum = runData.Last().time - 11000;
+                dataGraph.ChartAreas[2].AxisX.Minimum = runData.Last().time - 11000;
+
+                if (SelectedAxis == "gyro")
+                {
+                    dataGraph.Series["Series1"].Points.AddXY(runData.Last().time, runData.Last().gyro_x);
+                    dataGraph.Series["Series2"].Points.AddXY(runData.Last().time, runData.Last().gyro_y);
+                    dataGraph.Series["Series3"].Points.AddXY(runData.Last().time, runData.Last().gyro_z);
+                }
+                else if (SelectedAxis == "accel")
+                {
+                    dataGraph.Series["Series1"].Points.AddXY(runData.Last().time, runData.Last().accel_x);
+                    dataGraph.Series["Series2"].Points.AddXY(runData.Last().time, runData.Last().accel_y);
+                    dataGraph.Series["Series3"].Points.AddXY(runData.Last().time, runData.Last().accel_z);
+                }
+                else if (SelectedAxis == "rotation")
+                {
+                    dataGraph.Series["Series1"].Points.AddXY(runData.Last().time, runData.Last().roll);
+                    dataGraph.Series["Series2"].Points.AddXY(runData.Last().time, runData.Last().pitch);
+                    dataGraph.Series["Series3"].Points.AddXY(runData.Last().time, runData.Last().yaw);
+                }
             }
-        }
+        } 
 
         public Int32 time;
 
@@ -111,7 +176,10 @@ namespace MyoVisualizedApp
         {
             startTime.Start();
             dataTrackBar.Minimum = 0;
-            dataTrackBar.Maximum = runData.Last().time + 10;
+            if (!liveData)
+            {
+                dataTrackBar.Maximum = runData.Last().time + 10;
+            }
         } 
 
         private void btnLoadFile_Click(object sender, EventArgs e)
@@ -143,7 +211,7 @@ namespace MyoVisualizedApp
                     }
                     else
                     {
-                        string[] singleLine = DataLine.Split(SplitChar);
+                       /* string[] singleLine = DataLine.Split(SplitChar);
                         float.TryParse(singleLine[0], out roll);
                         float.TryParse(singleLine[1], out pitch);
                         float.TryParse(singleLine[2], out yaw);
@@ -157,6 +225,7 @@ namespace MyoVisualizedApp
 
                         Sample sampleData = new Sample(roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, time);
                         runData.Add(sampleData);
+                        */
                     }
                 }
                 //set ChartAreas

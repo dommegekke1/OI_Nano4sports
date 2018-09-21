@@ -206,30 +206,30 @@ int main(int argc, char** argv)
 				std::string measurement;
 
 
-				/*  //Accelerometer
-				measurement.append(std::to_string(collector.getAccelerometer().x())); measurement.append(" ");
-				measurement.append(std::to_string(collector.getAccelerometer().y())); measurement.append(" ");
-				measurement.append(std::to_string(collector.getAccelerometer().z())); measurement.append(" \n"); 
-				*/
+				
+				// Rotation (from gyroscope)
+				measurement.append(std::to_string(collector.getRotation_roll())); measurement.append(" ");
+				measurement.append(std::to_string(collector.getRotation_pitch())); measurement.append(" ");
+				measurement.append(std::to_string(collector.getRotation_yaw())); measurement.append(" ");
 
-				/*	// Gyroscope
+				/*
+				// Gyroscope
 				measurement.append(std::to_string(collector.getGyroscope().x())); measurement.append(" ");
 				measurement.append(std::to_string(collector.getGyroscope().y())); measurement.append(" ");
-				measurement.append(std::to_string(collector.getGyroscope().z())); measurement.append(" \n"); 
-				*/
+				measurement.append(std::to_string(collector.getGyroscope().z())); measurement.append(" ");   
 
-				/*	// Rotation (from gyroscope)
-				measurement.append(std::to_string(collector.getRotation_pitch())); measurement.append(" ");
-				measurement.append(std::to_string(collector.getRotation_roll())); measurement.append(" ");
-				measurement.append(std::to_string(collector.getRotation_yaw())); measurement.append(" \n");
-				*/
-
+				//Accelerometer
+				measurement.append(std::to_string(collector.getAccelerometer().x())); measurement.append(" ");
+				measurement.append(std::to_string(collector.getAccelerometer().y())); measurement.append(" ");
+				measurement.append(std::to_string(collector.getAccelerometer().z())); measurement.append(" ");
+					*/			
+				measurement.append(std::to_string(relativeTime)); measurement.append(" \n");
 				
-					//  some EMG data
+				/*	//  some EMG data
 				measurement.append(std::to_string((int)EMG_Data[5])); measurement.append(" ");
 				measurement.append(std::to_string((int)EMG_Data[6])); measurement.append(" ");
 				measurement.append(std::to_string((int)EMG_Data[7])); measurement.append(" \n");
-
+				*/
 
 
 				char messageBuffer[512];
