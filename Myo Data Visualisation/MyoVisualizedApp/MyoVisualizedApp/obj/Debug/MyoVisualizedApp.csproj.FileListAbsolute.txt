@@ -1,0 +1,52 @@
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojResolveAssemblyReference.cache
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Google Drive\Thuis\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojResolveAssemblyReference.cache
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CoreCompileInputs.cache
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\Nicky\Google Drive\OI Project\C-sharp\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojResolveAssemblyReference.cache
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojResolveAssemblyReference.cache
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\timho\Desktop\Open Inno\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojResolveAssemblyReference.cache
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\timho\Source\Repos\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.Cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojAssemblyReference.cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CoreCompileInputs.cache
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
