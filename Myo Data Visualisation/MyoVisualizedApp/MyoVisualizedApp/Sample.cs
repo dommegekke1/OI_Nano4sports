@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyoVisualizedApp
 {
-    class Sample
+    public class Sample
     {
         public float roll { get; private set; }
         public float pitch { get; private set; }

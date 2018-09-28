@@ -50,3 +50,24 @@ D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\
 D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CoreCompileInputs.cache
 D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
 D:\school\Code\S4\OI\OI_Nano4sports\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojAssemblyReference.cache
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.cache
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CoreCompileInputs.cache
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.dll
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.pdb
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.xml
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CopyComplete
+C:\Users\timho\Desktop\Open Inno\OI_Nano4sports-master\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Geared.dll
