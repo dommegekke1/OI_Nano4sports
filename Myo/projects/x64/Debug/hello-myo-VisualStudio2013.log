@@ -1,11 +1,16 @@
-﻿  Myo.cpp
-d:\school\code\s4\oi\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
-  d:\school\code\s4\oi\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
-d:\school\code\s4\oi\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
-  d:\school\code\s4\oi\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
-d:\school\code\s4\oi\oi_nano4sports\myo\projects\myo.cpp(237): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-d:\school\code\s4\oi\oi_nano4sports\myo\projects\myo.cpp(236): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  DataCollector.cpp
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+  Myo.cpp
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\projects\stepcalculator.h(26): error C2059: syntax error: '['
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\projects\stepcalculator.h(26): error C2238: unexpected token(s) preceding ';'
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\projects\myo.cpp(179): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\projects\myo.cpp(178): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(338): note: see declaration of 'strncpy'
-  hello-myo-VisualStudio2013.vcxproj -> D:\school\Code\S4\OI\OI_Nano4sports\Myo\projects\x64\Debug\Nano4Sports.exe
-  Copy required dlls to output directory
-          1 file(s) copied.
+  Generating Code...
