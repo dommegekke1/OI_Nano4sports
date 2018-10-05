@@ -12,6 +12,7 @@
 #include <myo/myo.hpp>
 #include "DataCollector.h"
 #include "Communicator.h"
+#include "StepCalculator.h"
 
 constexpr auto Connected = true;
 const char filename[] = "test.txt ";
@@ -50,7 +51,10 @@ int main(int argc, char** argv)
 
 		// starting com port
 		// magic from mister Ryan
-		Communicator COM = Communicator(4, CBR_115200);
+		Communicator COM = Communicator(6, CBR_115200);
+
+		// add the Stepcalculator
+		StepCalculator WaveDetector = StepCalculator(8, 10, 150);
 
 
 		// initialise baterylevel and bluetoothRange for the collector 
@@ -64,77 +68,33 @@ int main(int argc, char** argv)
 		myo->setStreamEmg(myo->streamEmgEnabled);
 			
 
-		// calculaatooor apm
-		const float upperThreshold = 120;
-		const float lowerThreshold = 120;
-		bool aboveUpperThresholdValue = false;
-
-
-		// calculate good one
-
-		float highestNumber = collector.getGyroscope().z();
-		float lowestNumber = collector.getGyroscope().z();
-
-		bool flank = true;
-		//
-
-
 
 		int display = 0;
 		int relativeTime = 0;
-		int sjuncounter = 0;
+		int steps = 0;
 
 		while (1) {
 			hub.run(1000 / 60); // time setting
 
 			relativeTime = std::clock();
 
-
-			/* calculate apm
-			if (collector.getGyroscope().z() > upperThreshold && !aboveUpperThresholdValue)
-			{
-				aboveUpperThresholdValue = true;
-				sjuncounter++;
-				
-
-			}
-			else if (collector.getGyroscope().z() < upperThreshold && aboveUpperThresholdValue )
-			{
-				aboveUpperThresholdValue = false;
-				sjuncounter++;
-			}
-			*/
-
-			//calculate flank 
-			if (collector.getGyroscope().z() > highestNumber)
-			{
-				highestNumber = collector.getGyroscope().z();
-
-			}
-			else if (flank)
-			{
-				// beat
-				lowestNumber = highestNumber;
-			}
-
-			if (collector.getGyroscope().z() < lowestNumber)
-			{
-				lowestNumber = collector.getGyroscope().z();
-			}
-			else if(!flank)
-			{
-				// beat
-				highestNumber = lowestNumber;
-				//sjuncounter++;
-			}
-
-
-
 			//Get EMG DATA
 			std::array<int8_t, 8> EMG_Data;
 			collector.getEMG(&EMG_Data);
 
+			// detection 
+			WaveDetector.Calculate(collector.getGyroscope().z());
+			if (WaveDetector.GetStep())
+			{
+				steps++;
+			}
+
+
+
 #pragma region Display output
+
+
+
 			display++;
 			if (display > 15)
 			{
@@ -147,7 +107,10 @@ int main(int argc, char** argv)
 					else { std::cout << "					Disconnected \n\n"; }
 				std::cout << "		Battery: "<< (int)collector.getBatteryLevel() << "		"
 					<< "	Bluetooth Signal Strength: " << (int)collector.getBluetoothRange() <<"\n \n";
-				
+
+				// stepcalculator
+
+
 
 				// Measurements 
 				std::cout << "			Rotation_pitch		: " << collector.getRotation_pitch() << "\n"
@@ -173,7 +136,7 @@ int main(int argc, char** argv)
 				// footer
 				std::cout << "		Writing to "	 << filename << "\n";
 				std::cout << "		Writing to COM4" <<   "\n";
-				std::cout << "		some magic  :" << sjuncounter <<"\n";
+				std::cout << "		some magic  :" << steps <<"\n";
 
 			}
 #pragma endregion
@@ -212,7 +175,7 @@ int main(int argc, char** argv)
 				measurement.append(std::to_string(collector.getRotation_pitch())); measurement.append(" ");
 				measurement.append(std::to_string(collector.getRotation_yaw())); measurement.append(" ");
 
-				/*
+				
 				// Gyroscope
 				measurement.append(std::to_string(collector.getGyroscope().x())); measurement.append(" ");
 				measurement.append(std::to_string(collector.getGyroscope().y())); measurement.append(" ");
@@ -222,7 +185,7 @@ int main(int argc, char** argv)
 				measurement.append(std::to_string(collector.getAccelerometer().x())); measurement.append(" ");
 				measurement.append(std::to_string(collector.getAccelerometer().y())); measurement.append(" ");
 				measurement.append(std::to_string(collector.getAccelerometer().z())); measurement.append(" ");
-					*/			
+							
 				measurement.append(std::to_string(relativeTime)); measurement.append(" \n");
 				
 				/*	//  some EMG data
@@ -232,9 +195,9 @@ int main(int argc, char** argv)
 				*/
 
 
-				char messageBuffer[512];
-				strncpy(messageBuffer, measurement.c_str(), sizeof(messageBuffer));
-				COM.Write(messageBuffer, measurement.length());
+				//char messageBuffer[512];
+				//strncpy(messageBuffer, measurement.c_str(), sizeof(messageBuffer));
+				//COM.Write(messageBuffer, measurement.length());
 			}
 #pragma endregion
 			
