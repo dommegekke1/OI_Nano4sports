@@ -29,6 +29,7 @@ private:
     std::vector<int> Direction;
 	std::vector<int> Last_Directions;
     int lastDetectedPeek;
+	float kijk;
 
     float directionThreshold;
     float triggerThreshold;

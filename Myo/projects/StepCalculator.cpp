@@ -58,18 +58,25 @@ void StepCalculator::Calculate(float Sample)
         average += Direction[i];
     }
 
+	kijk = Sample;
+
     DEBUG_arrayOUT = average;
     if (average == 0 && lastDetectedPeek > measureLength)
     {
-		if (Sample > (float)50 && (Sample >= triggerThreshold))
+		if (Sample >= triggerThreshold)
 		{
 			step = true;
 			lastDetectedPeek = 0;
 		}
-		else if (Sample < (float)-50 && (Sample <= triggerThreshold))
+		else if (Sample <= (triggerThreshold - (triggerThreshold*2)) )
 		{
 			step = true;
 			lastDetectedPeek = 0;
+
+			if (kijk > 1)
+			{
+
+			}
 		}
         
     }

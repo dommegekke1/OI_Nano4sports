@@ -51,7 +51,7 @@ int main(int argc, char** argv)
 
 		// starting com port
 		// magic from mister Ryan
-		Communicator COM = Communicator(6, CBR_115200);
+		Communicator COM = Communicator(4, CBR_115200);
 
 		// add the Stepcalculator
 		StepCalculator WaveDetector = StepCalculator(8, 10, 150);
@@ -195,9 +195,9 @@ int main(int argc, char** argv)
 				*/
 
 
-				//char messageBuffer[512];
-				//strncpy(messageBuffer, measurement.c_str(), sizeof(messageBuffer));
-				//COM.Write(messageBuffer, measurement.length());
+				char messageBuffer[512];
+				strncpy(messageBuffer, measurement.c_str(), sizeof(messageBuffer));
+				COM.Write(messageBuffer, measurement.length());
 			}
 #pragma endregion
 			
