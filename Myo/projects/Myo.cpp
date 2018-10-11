@@ -1,4 +1,3 @@
-#define _USE_MATH_DEFINES
 #include <iostream>
 #include <iomanip>
 #include <stdexcept>
@@ -6,13 +5,16 @@
 #include <string.h>
 #include <fstream>
 
-
-
 // The only file that needs to be included to use the Myo C++ SDK is myo.hpp.
 #include <myo/myo.hpp>
 #include "DataCollector.h"
 #include "Communicator.h"
 //#include "StepCalculator.h"		todo: --> implement this 
+
+
+//#include "UDPclient.h"
+//UDPClient *client = new UDPClient();
+//client->Write("1"); voor elke stap dit doen
 
 constexpr auto Connected = true;
 const char filename[] = "test.txt ";

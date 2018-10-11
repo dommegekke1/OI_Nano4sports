@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17134.0
+<<<<<<< HEAD
 Debug|x64|C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo\projects\|
+=======
+Debug|x64|C:\Users\Nicky\Documents\OI_Nano4sports\Myo\projects\|
+>>>>>>> 46dbbca010c9c3f8eeb79a98188b04ec17cfbed3
