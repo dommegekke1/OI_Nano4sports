@@ -12,7 +12,7 @@
 #include <myo/myo.hpp>
 #include "DataCollector.h"
 #include "Communicator.h"
-#include "StepCalculator.h"
+#include "PeakDetector.h"
 
 constexpr auto Connected = true;
 const char filename[] = "test.txt ";
@@ -54,7 +54,7 @@ int main(int argc, char** argv)
 		Communicator COM = Communicator(4, CBR_115200);
 
 		// add the Stepcalculator
-		StepCalculator WaveDetector = StepCalculator(8, 10, 150);
+		 PeakDetector<float> WaveDetector = PeakDetector<float>(8, 10, 150,0);
 
 
 		// initialise baterylevel and bluetoothRange for the collector 
@@ -84,7 +84,7 @@ int main(int argc, char** argv)
 
 			// detection 
 			WaveDetector.Calculate(collector.getGyroscope().z());
-			if (WaveDetector.GetStep())
+			if (WaveDetector.GetPeak())
 			{
 				steps++;
 			}

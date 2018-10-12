@@ -1,12 +1,14 @@
 ﻿  Myo.cpp
-c:\users\timho\documents\school\gitprojects\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
-  c:\users\timho\documents\school\gitprojects\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
-c:\users\timho\documents\school\gitprojects\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
-  c:\users\timho\documents\school\gitprojects\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
-c:\users\timho\documents\school\gitprojects\oi_nano4sports\myo\projects\myo.cpp(200): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-c:\users\timho\documents\school\gitprojects\oi_nano4sports\myo\projects\myo.cpp(199): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\projects\myo.cpp(200): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\projects\myo.cpp(199): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+  PeakDetector.cpp
+  Generating Code...
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
-  hello-myo-VisualStudio2013.vcxproj -> C:\Users\timho\Documents\school\GitProjects\OI_Nano4sports\Myo\projects\x64\Release\Nano4Sports.exe
+  hello-myo-VisualStudio2013.vcxproj -> C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo\projects\x64\Release\Nano4Sports.exe
   Copy required dlls to output directory
           1 file(s) copied.
