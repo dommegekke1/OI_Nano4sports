@@ -5,7 +5,7 @@
 template <class T>
 PeakDetector<T>::PeakDetector(int measureLength, T minimumSampleDifference, T minimumPeakThreshold, T mimimumPeakOffset)
 {
-    if (measureLength < 4  || !(measureLength %2))	throw "measureLength";
+    if (measureLength <= 4  || !(measureLength %2))	throw "measureLength";
     
     this->measureLength = measureLength;
     this->minimumPeakThreshold = minimumPeakThreshold;
@@ -16,7 +16,7 @@ PeakDetector<T>::PeakDetector(int measureLength, T minimumSampleDifference, T mi
     currentDirection = 0;
     lastDetectedPeek = 0;
 	
-
+	peak = PeakType::noneDetected;
 	Direction.resize(measureLength);	
 	RawData.resize(measureLength);
 }
@@ -29,7 +29,7 @@ PeakDetector<T>::~PeakDetector()
 template <class T>
 PeakType PeakDetector<T>::GetPeak()
 {
-	return PeakType::negative;
+	return peak;
 }
 
 template <class T>
@@ -45,7 +45,7 @@ void PeakDetector<T>::Calculate(T sample)
 	lastDetectedPeek++;
 
     if      (lastSample < sample - minimumSampleDifference)		{ currentDirection = -1; }
-    else if (lastSample > sample + minimumSampleDifference)		{ currentDirection = 1; }
+    else if (lastSample > sample + minimumSampleDifference)		{ currentDirection =  1; }
     else														{ return; }
 
     lastSample = sample;
@@ -66,11 +66,10 @@ void PeakDetector<T>::Calculate(T sample)
 		{
 			peak = PeakType::negative;
 			lastDetectedPeek = 0;
-
-		}
-        
+		}     
     }
 }
+
 
 template <class T>
 int PeakDetector<T>::Average(std::vector<int> array, size_t arrayLength)

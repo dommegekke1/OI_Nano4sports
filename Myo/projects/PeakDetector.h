@@ -17,7 +17,7 @@ enum PeakType: uint8_t { positive, negative, noneDetected};
 template <class T>
 class PeakDetector
 {
-public:
+	public:
 	PeakDetector(int measureLength, T minimumSampleDifference, T minimumPeakThreshold, T mimimumPeakOffset);
 	~PeakDetector();
 
