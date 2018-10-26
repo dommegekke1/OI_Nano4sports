@@ -36,7 +36,7 @@ public:
             {
                 std::runtime_error exception(libmyo_error_cstring(_error));
                 libmyo_free_error_details(_error);
-.                throw exception;
+               throw exception;
             }
             case libmyo_error_invalid_argument:
             {

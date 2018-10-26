@@ -63,7 +63,7 @@ public:
     /// Return the internal libmyo object corresponding to this hub.
     libmyo_hub_t libmyoObject();
 
-protected:
+ //protected:
     void onDeviceEvent(libmyo_event_t event);
 
     Myo* lookupMyo(libmyo_myo_t opaqueMyo) const;

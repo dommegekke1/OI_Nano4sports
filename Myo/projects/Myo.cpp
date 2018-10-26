@@ -28,19 +28,30 @@ int main(int argc, char** argv)
 		myo::Hub hub("com.example.hello-myo");
 		std::cout << "Attempting to find a Myo..." << std::endl;
 	
+	
+
+
+
 		myo::Myo* myo = hub.waitForMyo(10000);
+
+		//myo::Myo* myo = hub.addMyo();
+
+
 		if (!myo)
 		{
 			throw std::runtime_error("Unable to find a Myo!");
 		}
+
+
 
 		// We've found a Myo.
 		std::cout << "Connected to a Myo armband!" << std::endl << std::endl;
 #pragma endregion
 
 		DataCollector collector;
+		std::cout << "t1!" << std::endl << std::endl;
 		hub.addListener(&collector);
-
+		std::cout << "t2!" << std::endl << std::endl;
 #pragma region Create file
 		//file open
 		std::ofstream valueFile;
@@ -51,7 +62,7 @@ int main(int argc, char** argv)
 
 		// starting com port
 		// magic from mister Ryan
-		Communicator COM = Communicator(4, CBR_115200);
+		//Communicator COM = Communicator(4, CBR_115200);
 
 		// add the Stepcalculator
 		 PeakDetector<float> WaveDetector = PeakDetector<float>(8, 10, 150,0);
@@ -197,7 +208,7 @@ int main(int argc, char** argv)
 
 				char messageBuffer[512];
 				strncpy(messageBuffer, measurement.c_str(), sizeof(messageBuffer));
-				COM.Write(messageBuffer, measurement.length());
+				//COM.Write(messageBuffer, measurement.length());
 			}
 #pragma endregion
 			

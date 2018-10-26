@@ -5,7 +5,7 @@
 template <class T>
 PeakDetector<T>::PeakDetector(int measureLength, T minimumSampleDifference, T minimumPeakThreshold, T mimimumPeakOffset)
 {
-    if (measureLength <= 4  || !(measureLength %2))	throw "measureLength";
+    if (measureLength <= 4  || !(measureLength %2 == 0))	throw "measureLength";
     
     this->measureLength = measureLength;
     this->minimumPeakThreshold = minimumPeakThreshold;
