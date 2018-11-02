@@ -56,7 +56,7 @@ int main(int argc, char** argv)
 		//file open
 		std::ofstream valueFile;
 		valueFile.open(filename);
-		valueFile << "roll,pitch,yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, time\n";
+		valueFile << "roll,pitch,yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7, time\n";
 #pragma endregion
 
 
@@ -124,8 +124,9 @@ int main(int argc, char** argv)
 
 
 				// Measurements 
-				std::cout << "			Rotation_pitch		: " << collector.getRotation_pitch() << "\n"
+				std::cout 
 					<< "			Rotation_roll		: " << collector.getRotation_roll() << "\n"
+					<< "			Rotation_pitch		: " << collector.getRotation_pitch() << "\n"
 					<< "			Rotation_yaw		: " << collector.getRotation_yaw() << "\n"
 					<< "			Gyroscope x		: " << collector.getGyroscope().x() << "\n"
 					<< "			Gyroscope y		: " << collector.getGyroscope().y() << "\n"
@@ -149,6 +150,8 @@ int main(int argc, char** argv)
 				std::cout << "		Writing to COM4" <<   "\n";
 				std::cout << "		some magic  :" << steps <<"\n";
 
+				
+
 			}
 #pragma endregion
 
@@ -157,23 +160,24 @@ int main(int argc, char** argv)
 			if (collector.getConnectionStatus() == Connected)
 			{
 				// writing to File
-				valueFile	<< collector.getRotation_pitch()		<< " "
-							<< collector.getRotation_roll()			<< " "
-							<< collector.getRotation_yaw()			<< " "
-							<< collector.getGyroscope().x()			<< " "
-							<< collector.getGyroscope().y()			<< " "
-							<< collector.getGyroscope().z()			<< " "
-							<< collector.getAccelerometer().x()		<< " "
-							<< collector.getAccelerometer().y()		<< " "
-							<< collector.getAccelerometer().z()		<< " "
-							<< (int)EMG_Data[0]						<< " "
-							<< (int)EMG_Data[1]						<< " "
-							<< (int)EMG_Data[2]						<< " "
-							<< (int)EMG_Data[3]						<< " "
-							<< (int)EMG_Data[4]						<< " "
-							<< (int)EMG_Data[5]						<< " "
-							<< (int)EMG_Data[6]						<< " "
-							<< (int)EMG_Data[7]						<< " "
+				valueFile	
+							<< collector.getRotation_roll()			<< ","
+							<< collector.getRotation_pitch()		<< ","
+							<< collector.getRotation_yaw()			<< ","
+							<< collector.getGyroscope().x()			<< ","
+							<< collector.getGyroscope().y()			<< ","
+							<< collector.getGyroscope().z()			<< ","
+							<< collector.getAccelerometer().x()		<< ","
+							<< collector.getAccelerometer().y()		<< ","
+							<< collector.getAccelerometer().z()		<< ","
+							<< (int)EMG_Data[0]						<< ","
+							<< (int)EMG_Data[1]						<< ","
+							<< (int)EMG_Data[2]						<< ","
+							<< (int)EMG_Data[3]						<< ","
+							<< (int)EMG_Data[4]						<< ","
+							<< (int)EMG_Data[5]						<< ","
+							<< (int)EMG_Data[6]						<< ","
+							<< (int)EMG_Data[7]						<< ","
 							<< relativeTime							<< "\n";
 
 				// SERIAL COM PORT PART 
@@ -196,14 +200,19 @@ int main(int argc, char** argv)
 				measurement.append(std::to_string(collector.getAccelerometer().x())); measurement.append(" ");
 				measurement.append(std::to_string(collector.getAccelerometer().y())); measurement.append(" ");
 				measurement.append(std::to_string(collector.getAccelerometer().z())); measurement.append(" ");
-							
-				measurement.append(std::to_string(relativeTime)); measurement.append(" \n");
 				
-				/*	//  some EMG data
+					//  some EMG data
+				measurement.append(std::to_string((int)EMG_Data[0])); measurement.append(" ");
+				measurement.append(std::to_string((int)EMG_Data[1])); measurement.append(" ");
+				measurement.append(std::to_string((int)EMG_Data[2])); measurement.append(" ");
+				measurement.append(std::to_string((int)EMG_Data[3])); measurement.append(" ");
+				measurement.append(std::to_string((int)EMG_Data[4])); measurement.append(" ");
 				measurement.append(std::to_string((int)EMG_Data[5])); measurement.append(" ");
 				measurement.append(std::to_string((int)EMG_Data[6])); measurement.append(" ");
-				measurement.append(std::to_string((int)EMG_Data[7])); measurement.append(" \n");
-				*/
+				measurement.append(std::to_string((int)EMG_Data[7])); measurement.append(" ");
+
+				measurement.append(std::to_string(relativeTime)); measurement.append(" \n");
+				
 
 
 				char messageBuffer[512];

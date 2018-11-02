@@ -17,6 +17,7 @@ DataCollector::DataCollector()
 void DataCollector::onOrientationData(myo::Myo* myo, uint64_t timestamp, const myo::Quaternion<float>& rotation)
 {	
 	rotation_r = rotation;
+	rotation_r.fromAxisAngle;
 
 	rotation_roll	= std::atan2(2.0f * (rotation.w() * rotation.x() + rotation.y() * rotation.z()),
 						  1.0f - 2.0f * (rotation.x() * rotation.x() + rotation.y() * rotation.y()));
