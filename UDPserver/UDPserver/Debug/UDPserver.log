@@ -1,4 +1,0 @@
-﻿  pch.cpp
-  UDPserver.cpp
-c:\users\nicky\documents\oi_nano4sports\udpserver\udpserver\udpserver.cpp(13): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  UDPserver.vcxproj -> C:\Users\Nicky\Documents\OI_Nano4sports\UDPserver\Debug\UDPserver.exe
