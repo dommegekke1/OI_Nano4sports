@@ -1,0 +1,10 @@
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\bin\Debug\UDPRec.exe.config
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\bin\Debug\UDPRec.exe
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\bin\Debug\UDPRec.pdb
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\obj\Debug\UDPRec.csprojAssemblyReference.cache
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\obj\Debug\UDPRec.Form1.resources
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\obj\Debug\UDPRec.Properties.Resources.resources
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\obj\Debug\UDPRec.csproj.GenerateResource.cache
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\obj\Debug\UDPRec.csproj.CoreCompileInputs.cache
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\obj\Debug\UDPRec.exe
+C:\Users\jensv\Source\Repos\UDPRec\UDPRec\obj\Debug\UDPRec.pdb
