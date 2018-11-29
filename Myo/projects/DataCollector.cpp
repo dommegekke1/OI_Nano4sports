@@ -48,8 +48,7 @@ void DataCollector::onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* e
 	}
 }
 
- 
-/// Extra device 
+
 void DataCollector::onBatteryLevelReceived(myo::Myo* myo, uint64_t timestamp, uint8_t level)
 {
 	batteryLevel = level;
@@ -66,6 +65,7 @@ void DataCollector::onConnect(myo::Myo* myo, uint64_t timestamp, myo::FirmwareVe
 {
 	connectionStatus = true;
 }
+
 
 void DataCollector::onDisconnect(myo::Myo* myo, uint64_t timestamp)
 {

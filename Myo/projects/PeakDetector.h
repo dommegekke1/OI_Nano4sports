@@ -28,7 +28,7 @@ class PeakDetector
 	T GetRawPeekValue();
 
 private:
-	int Average(std::vector<int> array, size_t arrayLength);
+	int Total(std::vector<int> array, size_t arrayLength);
 
 	int measureLength;
 	T minimumSampleDifference;
