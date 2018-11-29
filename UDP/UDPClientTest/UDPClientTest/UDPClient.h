@@ -11,10 +11,12 @@ public:
 	UDPClient();
 	~UDPClient();
 	bool Write(std::string s);
+	void Run();
 
 private:
 	WSADATA data;
 	WORD version = MAKEWORD(2, 2);
 	sockaddr_in server;
+	int serverLength;
 	SOCKET out;
 };
