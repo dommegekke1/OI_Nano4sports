@@ -24,7 +24,7 @@ void \mbox{\hyperlink{class_data_collector_a46ee5fda02554a8d84a0f449026dcfac}{on
 void \mbox{\hyperlink{class_data_collector_a43639de09ccb9c540a3d21d267e7460a}{on\+Emg\+Data}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const int8\+\_\+t $\ast$emg)
 \item 
 void \mbox{\hyperlink{class_data_collector_a56a6c61925d54439459fc1599f76c601}{on\+Battery\+Level\+Received}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, uint8\+\_\+t level)
-\begin{DoxyCompactList}\small\item\em Extra device. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{class_data_collector_aff0d95e10b014c460bf859abd6a01f74}{on\+Rssi}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, int8\+\_\+t rssi)
 \item 
 void \mbox{\hyperlink{class_data_collector_a8e6ee72005537474eb45f2a9310fa540}{on\+Connect}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, myo\+::\+Firmware\+Version firmware\+Version)
@@ -56,7 +56,7 @@ bool \mbox{\hyperlink{class_data_collector_a2dbac95176fb77c1714573e41ba4490f}{ge
 \subsection{Detailed Description}
 
 
-Definition at line 9 of file Data\+Collector.\+h.
+Definition at line 14 of file Data\+Collector.\+h.
 
 
 
@@ -89,7 +89,7 @@ accel myo\+::\+Vector3$<$float$>$ use raw value \+: .x() .y() .z().
 \end{DoxyReturn}
 
 
-Definition at line 54 of file Data\+Collector.\+h.
+Definition at line 59 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a376b4be3194c56e25084df4097968a46}\label{class_data_collector_a376b4be3194c56e25084df4097968a46}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Battery\+Level@{get\+Battery\+Level}}
@@ -106,7 +106,7 @@ Battery Level in procentage.
 \end{DoxyReturn}
 
 
-Definition at line 74 of file Data\+Collector.\+h.
+Definition at line 79 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a4992b2e777defed813c7ce15a73bc84b}\label{class_data_collector_a4992b2e777defed813c7ce15a73bc84b}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Bluetooth\+Range@{get\+Bluetooth\+Range}}
@@ -123,7 +123,7 @@ bluetooth range 0-\/127.
 \end{DoxyReturn}
 
 
-Definition at line 77 of file Data\+Collector.\+h.
+Definition at line 82 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a2dbac95176fb77c1714573e41ba4490f}\label{class_data_collector_a2dbac95176fb77c1714573e41ba4490f}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Connection\+Status@{get\+Connection\+Status}}
@@ -140,7 +140,7 @@ connection status (bool) true = Connected $\vert$ false = disconnected.
 \end{DoxyReturn}
 
 
-Definition at line 80 of file Data\+Collector.\+h.
+Definition at line 85 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a6994bc51d1e7cbcaeca954a4ba7f8103}\label{class_data_collector_a6994bc51d1e7cbcaeca954a4ba7f8103}} 
 \index{Data\+Collector@{Data\+Collector}!get\+E\+MG@{get\+E\+MG}}
@@ -159,7 +159,7 @@ Gets all 8 E\+MG sensor Values. (updates automatically if class is conneced to m
 \end{DoxyParams}
 
 
-Definition at line 57 of file Data\+Collector.\+h.
+Definition at line 62 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a04ad19d96b8574ff7c9f945cd1c5ddc6}\label{class_data_collector_a04ad19d96b8574ff7c9f945cd1c5ddc6}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Gyroscope@{get\+Gyroscope}}
@@ -176,7 +176,7 @@ accel myo\+::\+Vector3$<$float$>$ use raw value \+: .x() .y() .z().
 \end{DoxyReturn}
 
 
-Definition at line 51 of file Data\+Collector.\+h.
+Definition at line 56 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a46a7e8adb8679fde1021fe89ed0d0be0}\label{class_data_collector_a46a7e8adb8679fde1021fe89ed0d0be0}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation@{get\+Rotation}}
@@ -193,7 +193,7 @@ myo\+::\+Quaternion$<$float$>$ use raw value\+: .x() .y() .z() .w().
 \end{DoxyReturn}
 
 
-Definition at line 48 of file Data\+Collector.\+h.
+Definition at line 53 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a603dbbfb9d59838c775f51e1e695e638}\label{class_data_collector_a603dbbfb9d59838c775f51e1e695e638}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation\+\_\+pitch@{get\+Rotation\+\_\+pitch}}
@@ -210,7 +210,7 @@ Pitch in radial.
 \end{DoxyReturn}
 
 
-Definition at line 66 of file Data\+Collector.\+h.
+Definition at line 71 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a4e761ba292f93b5ac18e05a860a697ab}\label{class_data_collector_a4e761ba292f93b5ac18e05a860a697ab}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation\+\_\+roll@{get\+Rotation\+\_\+roll}}
@@ -227,7 +227,7 @@ Roll in radial.
 \end{DoxyReturn}
 
 
-Definition at line 63 of file Data\+Collector.\+h.
+Definition at line 68 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_a45175c5352dd3870c2d1cf99c4b2d938}\label{class_data_collector_a45175c5352dd3870c2d1cf99c4b2d938}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation\+\_\+yaw@{get\+Rotation\+\_\+yaw}}
@@ -244,7 +244,7 @@ Yaw in radial.
 \end{DoxyReturn}
 
 
-Definition at line 69 of file Data\+Collector.\+h.
+Definition at line 74 of file Data\+Collector.\+h.
 
 \mbox{\Hypertarget{class_data_collector_af284c1bda701eb04d8278848672a1be6}\label{class_data_collector_af284c1bda701eb04d8278848672a1be6}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Accelerometer\+Data@{on\+Accelerometer\+Data}}
@@ -264,11 +264,7 @@ Definition at line 31 of file Data\+Collector.\+cpp.
 
 
 
-Extra device. 
-
-
-
-Definition at line 53 of file Data\+Collector.\+cpp.
+Definition at line 52 of file Data\+Collector.\+cpp.
 
 \mbox{\Hypertarget{class_data_collector_a8e6ee72005537474eb45f2a9310fa540}\label{class_data_collector_a8e6ee72005537474eb45f2a9310fa540}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Connect@{on\+Connect}}
@@ -278,7 +274,7 @@ Definition at line 53 of file Data\+Collector.\+cpp.
 
 
 
-Definition at line 65 of file Data\+Collector.\+cpp.
+Definition at line 64 of file Data\+Collector.\+cpp.
 
 \mbox{\Hypertarget{class_data_collector_a89d1d780cdf635c607707f90b0665d50}\label{class_data_collector_a89d1d780cdf635c607707f90b0665d50}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Disconnect@{on\+Disconnect}}
@@ -328,7 +324,7 @@ Definition at line 17 of file Data\+Collector.\+cpp.
 
 
 
-Definition at line 59 of file Data\+Collector.\+cpp.
+Definition at line 58 of file Data\+Collector.\+cpp.
 
 
 

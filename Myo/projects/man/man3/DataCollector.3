@@ -31,7 +31,6 @@ Inherits DeviceListener\&.
 .ti -1c
 .RI "void \fBonBatteryLevelReceived\fP (myo::Myo *myo, uint64_t timestamp, uint8_t level)"
 .br
-.RI "Extra device\&. "
 .ti -1c
 .RI "void \fBonRssi\fP (myo::Myo *myo, uint64_t timestamp, int8_t rssi)"
 .br
@@ -84,7 +83,7 @@ Inherits DeviceListener\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 9 of file DataCollector\&.h\&.
+Definition at line 14 of file DataCollector\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "DataCollector::DataCollector ()"
@@ -105,7 +104,7 @@ accel myo::Vector3<float> use raw value : \&.x() \&.y() \&.z()\&.
 .PP
 
 .PP
-Definition at line 54 of file DataCollector\&.h\&.
+Definition at line 59 of file DataCollector\&.h\&.
 .SS "uint8_t DataCollector::getBatteryLevel ()\fC [inline]\fP"
 
 .PP
@@ -118,7 +117,7 @@ Battery Level in procentage\&.
 .PP
 
 .PP
-Definition at line 74 of file DataCollector\&.h\&.
+Definition at line 79 of file DataCollector\&.h\&.
 .SS "int8_t DataCollector::getBluetoothRange ()\fC [inline]\fP"
 
 .PP
@@ -131,7 +130,7 @@ bluetooth range 0-127\&.
 .PP
 
 .PP
-Definition at line 77 of file DataCollector\&.h\&.
+Definition at line 82 of file DataCollector\&.h\&.
 .SS "bool DataCollector::getConnectionStatus ()\fC [inline]\fP"
 
 .PP
@@ -144,7 +143,7 @@ connection status (bool) true = Connected | false = disconnected\&.
 .PP
 
 .PP
-Definition at line 80 of file DataCollector\&.h\&.
+Definition at line 85 of file DataCollector\&.h\&.
 .SS "void DataCollector::getEMG (std::array< int8_t, 8 > * data)\fC [inline]\fP"
 
 .PP
@@ -157,7 +156,7 @@ Gets all 8 EMG sensor Values\&. (updates automatically if class is conneced to m
 .PP
 
 .PP
-Definition at line 57 of file DataCollector\&.h\&.
+Definition at line 62 of file DataCollector\&.h\&.
 .SS "myo::Vector3<float> DataCollector::getGyroscope ()\fC [inline]\fP"
 
 .PP
@@ -170,7 +169,7 @@ accel myo::Vector3<float> use raw value : \&.x() \&.y() \&.z()\&.
 .PP
 
 .PP
-Definition at line 51 of file DataCollector\&.h\&.
+Definition at line 56 of file DataCollector\&.h\&.
 .SS "myo::Quaternion<float> DataCollector::getRotation ()\fC [inline]\fP"
 
 .PP
@@ -183,7 +182,7 @@ myo::Quaternion<float> use raw value: \&.x() \&.y() \&.z() \&.w()\&.
 .PP
 
 .PP
-Definition at line 48 of file DataCollector\&.h\&.
+Definition at line 53 of file DataCollector\&.h\&.
 .SS "float DataCollector::getRotation_pitch ()\fC [inline]\fP"
 
 .PP
@@ -196,7 +195,7 @@ Pitch in radial\&.
 .PP
 
 .PP
-Definition at line 66 of file DataCollector\&.h\&.
+Definition at line 71 of file DataCollector\&.h\&.
 .SS "float DataCollector::getRotation_roll ()\fC [inline]\fP"
 
 .PP
@@ -209,7 +208,7 @@ Roll in radial\&.
 .PP
 
 .PP
-Definition at line 63 of file DataCollector\&.h\&.
+Definition at line 68 of file DataCollector\&.h\&.
 .SS "float DataCollector::getRotation_yaw ()\fC [inline]\fP"
 
 .PP
@@ -222,7 +221,7 @@ Yaw in radial\&.
 .PP
 
 .PP
-Definition at line 69 of file DataCollector\&.h\&.
+Definition at line 74 of file DataCollector\&.h\&.
 .SS "void DataCollector::onAccelerometerData (myo::Myo * myo, uint64_t timestamp, const myo::Vector3< float > & accel)"
 
 .PP
@@ -230,13 +229,11 @@ Definition at line 31 of file DataCollector\&.cpp\&.
 .SS "void DataCollector::onBatteryLevelReceived (myo::Myo * myo, uint64_t timestamp, uint8_t level)"
 
 .PP
-Extra device\&. 
-.PP
-Definition at line 53 of file DataCollector\&.cpp\&.
+Definition at line 52 of file DataCollector\&.cpp\&.
 .SS "void DataCollector::onConnect (myo::Myo * myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion)"
 
 .PP
-Definition at line 65 of file DataCollector\&.cpp\&.
+Definition at line 64 of file DataCollector\&.cpp\&.
 .SS "void DataCollector::onDisconnect (myo::Myo * myo, uint64_t timestamp)"
 
 .PP
@@ -256,7 +253,7 @@ Definition at line 17 of file DataCollector\&.cpp\&.
 .SS "void DataCollector::onRssi (myo::Myo * myo, uint64_t timestamp, int8_t rssi)"
 
 .PP
-Definition at line 59 of file DataCollector\&.cpp\&.
+Definition at line 58 of file DataCollector\&.cpp\&.
 
 .SH "Author"
 .PP 
