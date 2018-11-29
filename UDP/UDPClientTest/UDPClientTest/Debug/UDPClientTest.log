@@ -1,1 +1,5 @@
-﻿  UDPClientTest.vcxproj -> C:\Users\Nicky\Documents\OI_Nano4sports\OI_Nano4sports\UDP\UDPClientTest\Debug\UDPClientTest.exe
+﻿  UDPClient.cpp
+  UDPClientTest.cpp
+  Generating Code...
+  LINK : C:\Users\Nicky\Documents\OI_Nano4sports\OI_Nano4sports\UDP\UDPClientTest\Debug\UDPClientTest.exe not found or not built by the last incremental link; performing full link
+  UDPClientTest.vcxproj -> C:\Users\Nicky\Documents\OI_Nano4sports\OI_Nano4sports\UDP\UDPClientTest\Debug\UDPClientTest.exe

@@ -15,7 +15,7 @@ UDPServer::UDPServer()
 
 	serverHint.sin_addr.S_un.S_addr = ADDR_ANY; // Us any IP address available on the machine
 	serverHint.sin_family = AF_INET; // Address format is IPv4
-	serverHint.sin_port = htons(54000); // Convert from little to big endian
+	serverHint.sin_port = 1;//htons(54000); // Convert from little to big endian
 
 	// Try and bind the socket to the IP and port
 	if (bind(in, (sockaddr*)&serverHint, sizeof(serverHint)) == SOCKET_ERROR)
@@ -25,6 +25,7 @@ UDPServer::UDPServer()
 	}
 
 	clientLength = sizeof(client);
+
 }
 
 UDPServer::~UDPServer()
