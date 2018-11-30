@@ -10,17 +10,13 @@ public:
 	UDPClient();
 	~UDPClient();
 	void Write(char[] message);
+	void Stop();
 
 	
 
 private:
 	WSADATA data;
-
 	WORD version = MAKEWORD(2, 2);
-
 	sockaddr_in server;
-
 	SOCKET out;
-
-	//functies
 };

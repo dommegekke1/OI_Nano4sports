@@ -39,3 +39,9 @@ void UDPClient::Write(char[] message)
 		printf("That didn't work! ");
 	}
 }
+
+void UDPClient::Stop()
+{
+	closesocket(out);
+	WSACleanup();
+}
