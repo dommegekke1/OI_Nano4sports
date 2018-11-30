@@ -92,3 +92,24 @@ C:\Users\timho\Documents\school\GitProjects\OI_Nano4sports\Myo Data Visualisatio
 C:\Users\timho\Documents\school\GitProjects\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CopyComplete
 C:\Users\timho\Documents\school\GitProjects\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
 C:\Users\timho\Documents\school\GitProjects\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csprojAssemblyReference.cache
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.cache
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CoreCompileInputs.cache
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.dll
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Geared.dll
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.xml
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CopyComplete
