@@ -1,5 +1,23 @@
-﻿  UDPClient.cpp
-  UDPClientTest.cpp
-  Generating Code...
-  LINK : C:\Users\Nicky\Documents\OI_Nano4sports\OI_Nano4sports\UDP\UDPClientTest\Debug\UDPClientTest.exe not found or not built by the last incremental link; performing full link
-  UDPClientTest.vcxproj -> C:\Users\Nicky\Documents\OI_Nano4sports\OI_Nano4sports\UDP\UDPClientTest\Debug\UDPClientTest.exe
+﻿  UDPClientTest.cpp
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(23): error C2440: 'initializing': cannot convert from 'const char [26]' to 'char'
+  d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(23): note: There is no context in which this conversion is possible
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(51): error C2664: 'size_t strlen(const char *)': cannot convert argument 1 from 'char' to 'const char *'
+  d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(51): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(51): error C2660: 'send': function does not take 3 arguments
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\winsock2.h(2076): note: see declaration of 'send'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(29): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: see declaration of 'getch'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(35): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: see declaration of 'getch'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(40): error C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\winsock2.h(1830): note: see declaration of 'inet_addr'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(47): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: see declaration of 'getch'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(55): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: see declaration of 'getch'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(66): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: see declaration of 'getch'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(79): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: see declaration of 'getch'
+d:\school\code\s4\oi\oi_nano4sports\udp\udpclienttest\udpclienttest\udpclienttest.cpp(86): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(453): note: see declaration of 'getch'

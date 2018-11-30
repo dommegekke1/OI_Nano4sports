@@ -1,41 +1,94 @@
 #include "pch.h"
-#include "UDPClient.h"
+#include "stdafx.h"
+#include <winsock2.h>
+#include <Ws2tcpip.h>
+#include <stdio.h>
+#include "iostream"
+#include "conio.h"
+using namespace std;
+#pragma comment(lib, "Ws2_32.lib")
+#define WIN32_LEAN_AND_MEAN
+#define DEFAULT_BUFLEN 512
+#define DEFAULT_PORT 27015
 
-UDPClient::UDPClient()
-{
-	// Start WinSock
-	int wsOk = WSAStartup(version, &data);
-	if (wsOk != 0)
-	{
-		std::cout << "Can't start Winsock! " << wsOk;
-		return;
+int main() {
+
+	int Result;
+	WSADATA wsaData;
+
+	SOCKET SocketNumber = INVALID_SOCKET;
+	struct sockaddr_in clientService;
+
+	int recvbuflen = DEFAULT_BUFLEN;
+	char *sendbuf = "Client: sending data test";
+	char recvbuf[DEFAULT_BUFLEN] = "";
+
+	Result = WSAStartup(MAKEWORD(2, 2), &wsaData);
+	if (Result != NO_ERROR) {
+		cout << "WSAStartup failed with error: " << Result;
+		getch();
 	}
 
-	// Create a hint structure for the server
-	server.sin_family = AF_INET; // AF_INET = IPv4 addresses
-	server.sin_port = 1111; //htons(54000); // Little to big endian conversion
-	inet_pton(AF_INET, "127.0.0.1", &server.sin_addr); // Convert from string to byte array
+	SocketNumber = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	if (SocketNumber == INVALID_SOCKET) {
+		cout << "socket failed with error: " << WSAGetLastError();
+		getch();
+		WSACleanup();
+	}
 
-	// Socket creation, note that the socket type is datagram
-	out = socket(AF_INET, SOCK_DGRAM, 0);
+	clientService.sin_family = AF_INET;
+	clientService.sin_addr.s_addr = inet_addr("127.0.0.1");
+	clientService.sin_port = htons(DEFAULT_PORT);
 
-	serverLength = sizeof(server);
-}
+	Result = connect(SocketNumber, (SOCKADDR*)&clientService, sizeof(clientService));
+	if (Result == SOCKET_ERROR) {
+		cout << "connect failed with error: " << WSAGetLastError();
+		closesocket(SocketNumber);
+		getch();
+		WSACleanup();
 
-UDPClient::~UDPClient()
-{
-	closesocket(out);
+	}
+	Result = send(SocketNumber, sendbuf, (int)strlen(sendbuf), 0);
+	if (Result == SOCKET_ERROR) {
+		cout << "send failed with error: " << WSAGetLastError();
+		closesocket(SocketNumber);
+		getch();
+		WSACleanup();
+
+	}
+
+	cout << "Bytes Sent: " << Result;
+
+	Result = shutdown(SocketNumber, SD_SEND);
+	if (Result == SOCKET_ERROR) {
+		cout << "shutdown failed with error: " << WSAGetLastError();
+		closesocket(SocketNumber);
+		getch();
+		WSACleanup();
+
+	}
+	do {
+
+		Result = recv(SocketNumber, recvbuf, recvbuflen, 0);
+		if (Result > 0)
+			cout << "Bytes received: " << Result;
+		else if (Result == 0)
+			cout << "Connection closed";
+		else
+			cout << "recv failed with error: " << WSAGetLastError();
+		getch();
+	} while (Result > 0);
+
+
+	Result = closesocket(SocketNumber);
+	if (Result == SOCKET_ERROR) {
+		wprintf(L"close failed with error: %d\n", WSAGetLastError());
+		getch();
+		WSACleanup();
+		return 1;
+	}
+
 	WSACleanup();
-}
 
-bool UDPClient::Write(std::string s)
-{
-	int sendOk = sendto(out, s.c_str(), s.size() + 1, 0, (sockaddr*)&server, sizeof(server));
-
-	if (sendOk == SOCKET_ERROR)
-	{
-		std::cout << "That didn't work! " << WSAGetLastError() << std::endl;
-		return false;
-	}
-	return true;
+	return 0;
 }
