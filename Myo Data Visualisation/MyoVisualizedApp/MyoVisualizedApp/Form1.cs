@@ -6,9 +6,10 @@ using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Wpf;
 using System.IO.Ports;
+using System.Net;
+using System.Net.Sockets;
 using System.Windows.Media;
 using LiveCharts.Geared;
-using Geared.Winforms.SpeedTest;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -16,13 +17,14 @@ namespace MyoVisualizedApp
 {
     public partial class Form1 : Form
     {
-
+        //udp stuff
+        UDPServer server = new UDPServer();
         List<Sample> runData = new List<Sample>();
         const float upperThreshold = 120;
         const float lowerThreshold = 120;
         bool aboveUpperThresholdValue = false;
 
-        string SelectedAxis = "gyro"; // gyro as default
+        string SelectedAxis1, SelectedAxis2, SelectedAxis3 = ""; // nothing as default
         SerialCom serCom = new SerialCom();
 
         bool liveData = false;
@@ -33,18 +35,33 @@ namespace MyoVisualizedApp
         public char SplitCharLoaded = ',';
         public float roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z;
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedAxis2 = comboBox2.SelectedText;
+            dataGraph.Series["Series2"].Points.Clear();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedAxis3 = comboBox3.SelectedText;
+            dataGraph.Series["Series3"].Points.Clear();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedAxis1 = comboBox1.SelectedText;
+            dataGraph.Series["Series1"].Points.Clear();
+        }
+
+        public int EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7;
+
         int simTimer = 0;
 
         public Form1()
         {
             InitializeComponent();
-            
-            rbtnGyro.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
-            rbtnAccel.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
-            rbtnRotation.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
 
             getAvailablePorts();
-           
         }
 
         void getAvailablePorts()
@@ -55,37 +72,29 @@ namespace MyoVisualizedApp
 
         private void btnLive_Click(object sender, EventArgs e)
         {
+            /* COM PORT opening
             string portname = comboBox1.Text;
             serCom.OpenPort(serialPort, 115200, portname);
+            */
+
+            //adding udp connection
+            server.Start();
+            //starting simulation
             startTime.Start();
             liveData = true;
-        }
-        private void radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            if (sender is RadioButton)
-            {
-                RadioButton radioButton = (RadioButton)sender;
-                //Gyro
-                if (rbtnGyro.Checked)
-                {
-                    SelectedAxis = "gyro";
-                }
-                else if (rbtnAccel.Checked)
-                {
-                    SelectedAxis = "accel";
-                }
-                else if (rbtnRotation.Checked)
-                {
-                    SelectedAxis = "rotation";
-                }
-            }
         }
 
         private void startTime_Tick(object sender, EventArgs e)
         {
             if (liveData)
             {
-                string DataLineLive = serialPort.ReadLine();
+                label1.Text = server.receivedMessage;
+
+                //Read data from COM
+                //string DataLineLive = serialPort.ReadLine();
+
+                //Read from Server
+                string DataLineLive = server.receivedMessage;
 
                 string[] singleLine = DataLineLive.Split(SplitChar);
                 float.TryParse(singleLine[0], out roll);
@@ -97,9 +106,17 @@ namespace MyoVisualizedApp
                 float.TryParse(singleLine[6], out accel_x);
                 float.TryParse(singleLine[7], out accel_y);
                 float.TryParse(singleLine[8], out accel_z);
-                Int32.TryParse(singleLine[9], out time);
+                int.TryParse(singleLine[9], out EMG0);
+                int.TryParse(singleLine[10], out EMG1);
+                int.TryParse(singleLine[11], out EMG2);
+                int.TryParse(singleLine[12], out EMG3);
+                int.TryParse(singleLine[13], out EMG4);
+                int.TryParse(singleLine[14], out EMG5);
+                int.TryParse(singleLine[15], out EMG6);
+                int.TryParse(singleLine[16], out EMG7);
+                Int32.TryParse(singleLine[17], out time);
 
-                Sample sampleData = new Sample(roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, time);
+                Sample sampleData = new Sample(roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7, time);
                 
                 dataGraph.ChartAreas[0].AxisX.Minimum = sampleData.time - 4000;
                 dataGraph.ChartAreas[1].AxisX.Minimum = sampleData.time - 4000;
@@ -125,25 +142,176 @@ namespace MyoVisualizedApp
                     }
                     simTimer = 0;
                 }
-
-                if (SelectedAxis == "gyro")
+                //selecting the right graph for the right axis
+                switch (SelectedAxis1)
                 {
-                    dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.gyro_x);
-                    dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.gyro_y);
-                    dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.gyro_z);
+                    case "Roll":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.roll);
+                        break;
+                    case "Ptch":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.pitch);
+                        break;
+                    case "Yaw":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.yaw);
+                        break;
+                    case "Gyro_X":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.gyro_x);
+                        break;
+                    case "Gyro_Y":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.gyro_y);
+                        break;
+                    case "Gyro_Z":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.gyro_z);
+                        break;
+                    case "Accel_X":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.accel_x);
+                        break;
+                    case "Accel_Y":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.accel_y);
+                        break;
+                    case "Accel_Z":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.accel_z);
+                        break;
+                    case "EMG_0":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG0);
+                        break;
+                    case "EMG_1":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG1);
+                        break;
+                    case "EMG_2":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG2);
+                        break;
+                    case "EMG_3":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG3);
+                        break;
+                    case "EMG_4":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG4);
+                        break;
+                    case "EMG_5":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG5);
+                        break;
+                    case "EMG_6":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG6);
+                        break;
+                    case "EMG_7":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG7);
+                        break;
+                    default:
+                        break;
                 }
-                else if (SelectedAxis == "accel")
+                switch (SelectedAxis2)
                 {
-                    dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.accel_x);
-                    dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.accel_y);
-                    dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.accel_z);
+                    case "Roll":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.roll);
+                        break;
+                    case "Ptch":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.pitch);
+                        break;
+                    case "Yaw":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.yaw);
+                        break;
+                    case "Gyro_X":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.gyro_x);
+                        break;
+                    case "Gyro_Y":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.gyro_y);
+                        break;
+                    case "Gyro_Z":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.gyro_z);
+                        break;
+                    case "Accel_X":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.accel_x);
+                        break;
+                    case "Accel_Y":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.accel_y);
+                        break;
+                    case "Accel_Z":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.accel_z);
+                        break;
+                    case "EMG_0":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG0);
+                        break;
+                    case "EMG_1":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG1);
+                        break;
+                    case "EMG_2":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG2);
+                        break;
+                    case "EMG_3":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG3);
+                        break;
+                    case "EMG_4":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG4);
+                        break;
+                    case "EMG_5":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG5);
+                        break;
+                    case "EMG_6":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG6);
+                        break;
+                    case "EMG_7":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG7);
+                        break;
+                    default:
+                        break;
                 }
-                else if (SelectedAxis == "rotation")
+                switch (SelectedAxis2)
                 {
-                    dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.roll);
-                    dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.pitch);
-                    dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.yaw);
+                    case "Roll":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.roll);
+                        break;
+                    case "Ptch":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.pitch);
+                        break;
+                    case "Yaw":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.yaw);
+                        break;
+                    case "Gyro_X":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.gyro_x);
+                        break;
+                    case "Gyro_Y":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.gyro_y);
+                        break;
+                    case "Gyro_Z":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.gyro_z);
+                        break;
+                    case "Accel_X":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.accel_x);
+                        break;
+                    case "Accel_Y":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.accel_y);
+                        break;
+                    case "Accel_Z":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.accel_z);
+                        break;
+                    case "EMG_0":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG0);
+                        break;
+                    case "EMG_1":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG1);
+                        break;
+                    case "EMG_2":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG2);
+                        break;
+                    case "EMG_3":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG3);
+                        break;
+                    case "EMG_4":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG4);
+                        break;
+                    case "EMG_5":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG5);
+                        break;
+                    case "EMG_6":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG6);
+                        break;
+                    case "EMG_7":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG7);
+                        break;
+                    default:
+                        break;
                 }
+                
             }
             else
             {
@@ -161,24 +329,7 @@ namespace MyoVisualizedApp
                     {
                         if (a.time < simTimer + 10 && a.time > simTimer)
                         {
-                            if (SelectedAxis == "gyro")
-                            {
-                                dataGraph.Series["Series1"].Points.AddXY(a.time, a.gyro_x);
-                                dataGraph.Series["Series2"].Points.AddXY(a.time, a.gyro_y);
-                                dataGraph.Series["Series3"].Points.AddXY(a.time, a.gyro_z);
-                            }
-                            else if (SelectedAxis == "accel")
-                            {
-                                dataGraph.Series["Series1"].Points.AddXY(a.time, a.accel_x);
-                                dataGraph.Series["Series2"].Points.AddXY(a.time, a.accel_y);
-                                dataGraph.Series["Series3"].Points.AddXY(a.time, a.accel_z);
-                            }
-                            else if (SelectedAxis == "rotation")
-                            {
-                                dataGraph.Series["Series1"].Points.AddXY(a.time, a.roll);
-                                dataGraph.Series["Series2"].Points.AddXY(a.time, a.pitch);
-                                dataGraph.Series["Series3"].Points.AddXY(a.time, a.yaw);
-                            }
+                            
 
                             if (a.gyro_z > upperThreshold && !aboveUpperThresholdValue)
                             {

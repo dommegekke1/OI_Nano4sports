@@ -3,17 +3,18 @@
 
 #include <vector>
 
-
-/*
-Code that invokes template functions must have matching 
-template function declarations. Declarations must include 
-the same template parameters as the definition. The following 
-sample generates LNK2019 on a user-defined operator, and shows 
-how to fix it.*/
-
-
 enum PeakType: uint8_t { positive, negative, noneDetected};
 
+/*!
+ *  @brief     Detects peaks in realtime signals by calculating the direction of a signal.
+ *  @details   
+ *			  
+ *			   
+ *  @author    Ryan Vrosch & Tim Hoenselaar
+ *  @version   1.3
+ *  @date      2018-11-30
+ *  @copyright GNU Public License.
+ */
 template <class T>
 class PeakDetector
 {
@@ -21,14 +22,13 @@ class PeakDetector
 	PeakDetector(int measureLength, T minimumSampleDifference, T minimumPeakThreshold, T mimimumPeakOffset);
 	~PeakDetector();
 
-	
 
 	void Calculate(T Sample);
 	PeakType GetPeak();
 	T GetRawPeekValue();
 
 private:
-	int Average(std::vector<int> array, size_t arrayLength);
+	int Total(std::vector<int> array, size_t arrayLength);
 
 	int measureLength;
 	T minimumSampleDifference;
@@ -38,7 +38,6 @@ private:
 	T lastSample;
 	PeakType peak;
 
-    
 
     int currentDirection;
     std::vector<int> Direction;

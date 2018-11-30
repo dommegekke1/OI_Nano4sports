@@ -1,7 +1,17 @@
+
 #include "PeakDetector.h"
 #include <algorithm>
 #include <vector>
 
+///
+/// @brief initialises all sample settings.
+///
+/// @param measureLength				Length of the sampling array, has to be an even number.
+/// @param minimumSampleDifference		If The sample is lower then previous sampleDifference the sample is discarded.
+/// @param minimumPeakThreshold			Minimum Threshold relative to Peakoffset. If Sample is lower than Peakthreshold 
+///										no peak will be detected. this value is the same for positive and negative samples.
+/// @param mimimumPeakOffset			Sets the baseline of the peakthreshold. 		
+///
 template <class T>
 PeakDetector<T>::PeakDetector(int measureLength, T minimumSampleDifference, T minimumPeakThreshold, T mimimumPeakOffset)
 {
@@ -21,23 +31,29 @@ PeakDetector<T>::PeakDetector(int measureLength, T minimumSampleDifference, T mi
 	RawData.resize(measureLength);
 }
 
+
 template <class T>
 PeakDetector<T>::~PeakDetector()
 {
 }
 
+/// @brief Call Calculate(T sample) before Getting the peakvalue.
 template <class T>
 PeakType PeakDetector<T>::GetPeak()
 {
 	return peak;
 }
 
+/// @brief Call Calculate(T sample) before Getting the RawPeekValue.
 template <class T>
 T PeakDetector<T>::GetRawPeekValue()
 {
 	return RawData[measureLength / 2];
 }
 
+
+/// @brief Calculates the signal if a direction is detected. use GetPeak() to see if a peak is detected.
+/// @param sample signal to calculate 	
 template <class T>
 void PeakDetector<T>::Calculate(T sample)
 {
@@ -55,7 +71,7 @@ void PeakDetector<T>::Calculate(T sample)
 
     Direction[measureLength - 1] = currentDirection;
 	
-    if (Average(Direction, measureLength) == 0 && lastDetectedPeek > measureLength)
+    if (Total(Direction, measureLength) == 0 && lastDetectedPeek > measureLength)
     {
 		if (sample >= mimimumPeakOffset + minimumPeakThreshold)
 		{
@@ -70,9 +86,9 @@ void PeakDetector<T>::Calculate(T sample)
     }
 }
 
-
+/// @brief Adds all values of an Vector together
 template <class T>
-int PeakDetector<T>::Average(std::vector<int> array, size_t arrayLength)
+int PeakDetector<T>::Total(std::vector<int> array, size_t arrayLength)
 {
 	int average = 0;
 	for (int i = 0; i < arrayLength; i++)
@@ -83,6 +99,12 @@ int PeakDetector<T>::Average(std::vector<int> array, size_t arrayLength)
 }
 
 
+/*
+Code that invokes template functions must have matching
+template function declarations. Declarations must include
+the same template parameters as the definition. The following
+sample generates LNK2019 on a user-defined operator, and shows
+how to fix it.*/
 template class PeakDetector<int>;
 template class PeakDetector<unsigned int>;
 template class PeakDetector<float>;

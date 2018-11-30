@@ -4,12 +4,12 @@
 
 DataCollector::DataCollector()
 {
-	connectionStatus = false;
-	rotation_roll = 0;
-	rotation_pitch = 0;
-	rotation_yaw = 0;
-	batteryLevel = 0;
-	BluetoothRange = 0;
+	connectionStatus	= false;
+	rotation_roll		= 0;
+	rotation_pitch		= 0;
+	rotation_yaw		= 0;
+	batteryLevel		= 0;
+	BluetoothRange		= 0;
 	EMG.empty();
 }
 
@@ -48,8 +48,7 @@ void DataCollector::onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* e
 	}
 }
 
- 
-/// Extra device 
+
 void DataCollector::onBatteryLevelReceived(myo::Myo* myo, uint64_t timestamp, uint8_t level)
 {
 	batteryLevel = level;
@@ -66,6 +65,7 @@ void DataCollector::onConnect(myo::Myo* myo, uint64_t timestamp, myo::FirmwareVe
 {
 	connectionStatus = true;
 }
+
 
 void DataCollector::onDisconnect(myo::Myo* myo, uint64_t timestamp)
 {
