@@ -9,10 +9,13 @@
 
 
 // The only file that needs to be included to use the Myo C++ SDK is myo.hpp.
+
+#include "UDPClient.h"
 #include <myo/myo.hpp>
 #include "DataCollector.h"
 #include "Communicator.h"
 #include "PeakDetector.h"
+
 
 constexpr auto Connected = true;
 const char filename[] = "test.txt ";
@@ -56,6 +59,28 @@ int main(int argc, char** argv)
 		valueFile.open(filename);
 		valueFile << "roll,pitch,yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7, time\n";
 #pragma endregion
+
+
+		// UDP
+
+		UDPClient netUDP = UDPClient("127.0.0.1", 1111);
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		// starting com port
@@ -148,6 +173,9 @@ int main(int argc, char** argv)
 				std::cout << "		Writing to COM4" <<   "\n";
 				std::cout << "		some magic  :" << steps <<"\n";
 
+
+
+
 				
 
 			}
@@ -180,6 +208,7 @@ int main(int argc, char** argv)
 
 				// SERIAL COM PORT PART 
 				std::string measurement;
+				
 
 
 				
@@ -212,9 +241,12 @@ int main(int argc, char** argv)
 				measurement.append(std::to_string(relativeTime)); measurement.append(" \n");
 				
 
+				netUDP.Write(measurement.c_str(), measurement.length());
 
 				char messageBuffer[512];
 				strncpy(messageBuffer, measurement.c_str(), sizeof(messageBuffer));
+				
+				
 				//COM.Write(messageBuffer, measurement.length());
 			}
 #pragma endregion

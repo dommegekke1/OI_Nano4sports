@@ -28,3 +28,13 @@ D:\school\Code\S4\OI\OI_Nano4sports\UDPV2\C#client\UDPRec\obj\Debug\UDPRec.cspro
 D:\school\Code\S4\OI\OI_Nano4sports\UDPV2\C#client\UDPRec\obj\Debug\UDPRec.csproj.CoreCompileInputs.cache
 D:\school\Code\S4\OI\OI_Nano4sports\UDPV2\C#client\UDPRec\obj\Debug\UDPRec.exe
 D:\school\Code\S4\OI\OI_Nano4sports\UDPV2\C#client\UDPRec\obj\Debug\UDPRec.pdb
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\bin\Debug\UDPRec.exe.config
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\bin\Debug\UDPRec.exe
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\bin\Debug\UDPRec.pdb
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\obj\Debug\UDPRec.csprojAssemblyReference.cache
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\obj\Debug\UDPRec.Form1.resources
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\obj\Debug\UDPRec.Properties.Resources.resources
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\obj\Debug\UDPRec.csproj.GenerateResource.cache
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\obj\Debug\UDPRec.csproj.CoreCompileInputs.cache
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\obj\Debug\UDPRec.exe
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\UDPV2\UDPServerC#\UDPRec\obj\Debug\UDPRec.pdb
