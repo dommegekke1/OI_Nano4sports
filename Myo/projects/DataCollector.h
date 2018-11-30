@@ -1,4 +1,3 @@
-
 #ifndef DATACOLLECTOR_H
 #define DATACOLLECTOR_H
 
@@ -18,7 +17,6 @@
  *  @warning   Some params dont update themselves, and need to be called via myo::Myo.
  *  @copyright GNU Public License.
  */
-#pragma once
 class DataCollector : public myo::DeviceListener
 {
 

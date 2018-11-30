@@ -1,4 +1,4 @@
-\section{Peak\+Detector$<$ T $>$ Class Template Reference}
+\hypertarget{class_peak_detector}{}\section{Peak\+Detector$<$ T $>$ Class Template Reference}
 \label{class_peak_detector}\index{Peak\+Detector$<$ T $>$@{Peak\+Detector$<$ T $>$}}
 
 
@@ -12,16 +12,16 @@ Detects peaks in realtime signals by calculating the direction of a signal.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Peak\+Detector} (int measure\+Length, T minimum\+Sample\+Difference, T minimum\+Peak\+Threshold, T mimimum\+Peak\+Offset)
+\mbox{\hyperlink{class_peak_detector_a616829654acf46b8574903d9abcdaf9d}{Peak\+Detector}} (int measure\+Length, T minimum\+Sample\+Difference, T minimum\+Peak\+Threshold, T mimimum\+Peak\+Offset)
 \begin{DoxyCompactList}\small\item\em initialises all sample settings. \end{DoxyCompactList}\item 
-\textbf{ $\sim$\+Peak\+Detector} ()
+\mbox{\hyperlink{class_peak_detector_a950c3287299cf1352cb7c32de2f54384}{$\sim$\+Peak\+Detector}} ()
 \item 
-void \textbf{ Calculate} (T Sample)
-\begin{DoxyCompactList}\small\item\em Calculates the signal if a direction is detected. use \doxyref{Get\+Peak()}{p.}{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc} to see if a peak is detected. \end{DoxyCompactList}\item 
-\textbf{ Peak\+Type} \textbf{ Get\+Peak} ()
-\begin{DoxyCompactList}\small\item\em Call \doxyref{Calculate(\+T sample)}{p.}{class_peak_detector_a888b9d29612caf03e7417ab3593f6392} before Getting the peakvalue. \end{DoxyCompactList}\item 
-T \textbf{ Get\+Raw\+Peek\+Value} ()
-\begin{DoxyCompactList}\small\item\em Call \doxyref{Calculate(\+T sample)}{p.}{class_peak_detector_a888b9d29612caf03e7417ab3593f6392} before Getting the Raw\+Peek\+Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}{Calculate}} (T Sample)
+\begin{DoxyCompactList}\small\item\em Calculates the signal if a direction is detected. use \mbox{\hyperlink{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc}{Get\+Peak()}} to see if a peak is detected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_peak_detector_8h_a4791e14c9f62a95fdf58cd8b41ca6a08}{Peak\+Type}} \mbox{\hyperlink{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc}{Get\+Peak}} ()
+\begin{DoxyCompactList}\small\item\em Call \mbox{\hyperlink{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}{Calculate(\+T sample)}} before Getting the peakvalue. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_peak_detector_aebfc5583c4c696119bbe834b1474d896}{Get\+Raw\+Peek\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Call \mbox{\hyperlink{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}{Calculate(\+T sample)}} before Getting the Raw\+Peek\+Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -45,12 +45,12 @@ G\+NU Public License.
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\label{class_peak_detector_a616829654acf46b8574903d9abcdaf9d}} 
+\mbox{\Hypertarget{class_peak_detector_a616829654acf46b8574903d9abcdaf9d}\label{class_peak_detector_a616829654acf46b8574903d9abcdaf9d}} 
 \index{Peak\+Detector@{Peak\+Detector}!Peak\+Detector@{Peak\+Detector}}
 \index{Peak\+Detector@{Peak\+Detector}!Peak\+Detector@{Peak\+Detector}}
-\subsubsection{Peak\+Detector()}
+\subsubsection{\texorpdfstring{Peak\+Detector()}{PeakDetector()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\textbf{ Peak\+Detector}$<$ T $>$\+::\textbf{ Peak\+Detector} (\begin{DoxyParamCaption}\item[{int}]{measure\+Length,  }\item[{T}]{minimum\+Sample\+Difference,  }\item[{T}]{minimum\+Peak\+Threshold,  }\item[{T}]{mimimum\+Peak\+Offset }\end{DoxyParamCaption})}
+\mbox{\hyperlink{class_peak_detector}{Peak\+Detector}}$<$ T $>$\+::\mbox{\hyperlink{class_peak_detector}{Peak\+Detector}} (\begin{DoxyParamCaption}\item[{int}]{measure\+Length,  }\item[{T}]{minimum\+Sample\+Difference,  }\item[{T}]{minimum\+Peak\+Threshold,  }\item[{T}]{mimimum\+Peak\+Offset }\end{DoxyParamCaption})}
 
 
 
@@ -67,57 +67,57 @@ initialises all sample settings.
 {\em mimimum\+Peak\+Offset} & Sets the baseline of the peakthreshold. \\
 \hline
 \end{DoxyParams}
-\mbox{\label{class_peak_detector_a950c3287299cf1352cb7c32de2f54384}} 
+\mbox{\Hypertarget{class_peak_detector_a950c3287299cf1352cb7c32de2f54384}\label{class_peak_detector_a950c3287299cf1352cb7c32de2f54384}} 
 \index{Peak\+Detector@{Peak\+Detector}!````~Peak\+Detector@{$\sim$\+Peak\+Detector}}
 \index{````~Peak\+Detector@{$\sim$\+Peak\+Detector}!Peak\+Detector@{Peak\+Detector}}
-\subsubsection{$\sim$\+Peak\+Detector()}
+\subsubsection{\texorpdfstring{$\sim$\+Peak\+Detector()}{~PeakDetector()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\textbf{ Peak\+Detector}$<$ T $>$\+::$\sim$\textbf{ Peak\+Detector} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\hyperlink{class_peak_detector}{Peak\+Detector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_peak_detector}{Peak\+Detector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\label{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}} 
+\mbox{\Hypertarget{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}\label{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}} 
 \index{Peak\+Detector@{Peak\+Detector}!Calculate@{Calculate}}
 \index{Calculate@{Calculate}!Peak\+Detector@{Peak\+Detector}}
-\subsubsection{Calculate()}
+\subsubsection{\texorpdfstring{Calculate()}{Calculate()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-void \textbf{ Peak\+Detector}$<$ T $>$\+::Calculate (\begin{DoxyParamCaption}\item[{T}]{sample }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{class_peak_detector}{Peak\+Detector}}$<$ T $>$\+::Calculate (\begin{DoxyParamCaption}\item[{T}]{sample }\end{DoxyParamCaption})}
 
 
 
-Calculates the signal if a direction is detected. use \doxyref{Get\+Peak()}{p.}{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc} to see if a peak is detected. 
+Calculates the signal if a direction is detected. use \mbox{\hyperlink{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc}{Get\+Peak()}} to see if a peak is detected. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em sample} & signal to calculate \\
 \hline
 \end{DoxyParams}
-\mbox{\label{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc}} 
+\mbox{\Hypertarget{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc}\label{class_peak_detector_a72f7916aa1d26388c9d70eee1cd5e3bc}} 
 \index{Peak\+Detector@{Peak\+Detector}!Get\+Peak@{Get\+Peak}}
 \index{Get\+Peak@{Get\+Peak}!Peak\+Detector@{Peak\+Detector}}
-\subsubsection{Get\+Peak()}
+\subsubsection{\texorpdfstring{Get\+Peak()}{GetPeak()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\textbf{ Peak\+Type} \textbf{ Peak\+Detector}$<$ T $>$\+::Get\+Peak (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\hyperlink{_peak_detector_8h_a4791e14c9f62a95fdf58cd8b41ca6a08}{Peak\+Type}} \mbox{\hyperlink{class_peak_detector}{Peak\+Detector}}$<$ T $>$\+::Get\+Peak (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Call \doxyref{Calculate(\+T sample)}{p.}{class_peak_detector_a888b9d29612caf03e7417ab3593f6392} before Getting the peakvalue. 
+Call \mbox{\hyperlink{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}{Calculate(\+T sample)}} before Getting the peakvalue. 
 
-\mbox{\label{class_peak_detector_aebfc5583c4c696119bbe834b1474d896}} 
+\mbox{\Hypertarget{class_peak_detector_aebfc5583c4c696119bbe834b1474d896}\label{class_peak_detector_aebfc5583c4c696119bbe834b1474d896}} 
 \index{Peak\+Detector@{Peak\+Detector}!Get\+Raw\+Peek\+Value@{Get\+Raw\+Peek\+Value}}
 \index{Get\+Raw\+Peek\+Value@{Get\+Raw\+Peek\+Value}!Peak\+Detector@{Peak\+Detector}}
-\subsubsection{Get\+Raw\+Peek\+Value()}
+\subsubsection{\texorpdfstring{Get\+Raw\+Peek\+Value()}{GetRawPeekValue()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-T \textbf{ Peak\+Detector}$<$ T $>$\+::Get\+Raw\+Peek\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+T \mbox{\hyperlink{class_peak_detector}{Peak\+Detector}}$<$ T $>$\+::Get\+Raw\+Peek\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Call \doxyref{Calculate(\+T sample)}{p.}{class_peak_detector_a888b9d29612caf03e7417ab3593f6392} before Getting the Raw\+Peek\+Value. 
+Call \mbox{\hyperlink{class_peak_detector_a888b9d29612caf03e7417ab3593f6392}{Calculate(\+T sample)}} before Getting the Raw\+Peek\+Value. 
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\textbf{ Peak\+Detector.\+h}\item 
-\textbf{ Peak\+Detector.\+cpp}\end{DoxyCompactItemize}
+\mbox{\hyperlink{_peak_detector_8h}{Peak\+Detector.\+h}}\item 
+\mbox{\hyperlink{_peak_detector_8cpp}{Peak\+Detector.\+cpp}}\end{DoxyCompactItemize}

@@ -167,12 +167,16 @@
     <ClCompile Include="Communicator.cpp" />
     <ClCompile Include="DataCollector.cpp" />
     <ClCompile Include="Myo.cpp" />
+    <ClCompile Include="pch.cpp" />
     <ClCompile Include="PeakDetector.cpp" />
+    <ClCompile Include="UDPClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Communicator.h" />
     <ClInclude Include="DataCollector.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="PeakDetector.h" />
+    <ClInclude Include="UDPClient.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
