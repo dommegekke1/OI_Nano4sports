@@ -7,9 +7,17 @@
 
 
 
-
-
-
+/*!
+ *  @brief     Contains all device information about a Myo Bracelet.
+ *  @details   It inherits all save data functions from myo::DeviceListener, so 
+ *			   to initalise the class from recieving data you have to put this 
+ *			   line afer Myo initialisation: myo::hub.addListener(&datacollector); 
+ *  @author    Ryan Vrosch
+ *  @version   1.1
+ *  @date      2018-11-30
+ *  @warning   Some params dont update themselves, and need to be called via myo::Myo.
+ *  @copyright GNU Public License.
+ */
 #pragma once
 class DataCollector : public myo::DeviceListener
 {
@@ -33,15 +41,16 @@ private:
 	bool connectionStatus;
 
 public:
+
 	DataCollector();
 
-	// Sensor (inherited from DeviceListener): needed for updating values
+	// Sensor			(inherited from DeviceListener): needed for updating values
 	void onOrientationData(myo::Myo* myo, uint64_t timestamp, const myo::Quaternion<float>& rotation);
 	void onAccelerometerData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& accel);
 	void onGyroscopeData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro);
 	void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* emg);
 
-	// device status (inherited from DeviceListener): needed for updating values
+	// device status	(inherited from DeviceListener): needed for updating values
 	void onBatteryLevelReceived(myo::Myo* myo, uint64_t timestamp, uint8_t level);
 	void onRssi(myo::Myo* myo, uint64_t timestamp, int8_t rssi);
 	void onConnect(myo::Myo* myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion);

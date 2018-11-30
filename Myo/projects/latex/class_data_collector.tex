@@ -1,5 +1,10 @@
-\hypertarget{class_data_collector}{}\section{Data\+Collector Class Reference}
+\section{Data\+Collector Class Reference}
 \label{class_data_collector}\index{Data\+Collector@{Data\+Collector}}
+
+
+Contains all device information about a Myo Bracelet.  
+
+
 
 
 {\ttfamily \#include $<$Data\+Collector.\+h$>$}
@@ -13,71 +18,80 @@ Inheritance diagram for Data\+Collector\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_data_collector_a6f7eccfdf026a83317c386a18d16397d}{Data\+Collector}} ()
+\textbf{ Data\+Collector} ()
 \item 
-void \mbox{\hyperlink{class_data_collector_a7e54df882eed064e4059b3361dff796f}{on\+Orientation\+Data}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const myo\+::\+Quaternion$<$ float $>$ \&rotation)
+void \textbf{ on\+Orientation\+Data} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const myo\+::\+Quaternion$<$ float $>$ \&rotation)
 \item 
-void \mbox{\hyperlink{class_data_collector_af284c1bda701eb04d8278848672a1be6}{on\+Accelerometer\+Data}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const myo\+::\+Vector3$<$ float $>$ \&accel)
+void \textbf{ on\+Accelerometer\+Data} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const myo\+::\+Vector3$<$ float $>$ \&accel)
 \item 
-void \mbox{\hyperlink{class_data_collector_a46ee5fda02554a8d84a0f449026dcfac}{on\+Gyroscope\+Data}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const myo\+::\+Vector3$<$ float $>$ \&gyro)
+void \textbf{ on\+Gyroscope\+Data} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const myo\+::\+Vector3$<$ float $>$ \&gyro)
 \item 
-void \mbox{\hyperlink{class_data_collector_a43639de09ccb9c540a3d21d267e7460a}{on\+Emg\+Data}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const int8\+\_\+t $\ast$emg)
+void \textbf{ on\+Emg\+Data} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, const int8\+\_\+t $\ast$emg)
 \item 
-void \mbox{\hyperlink{class_data_collector_a56a6c61925d54439459fc1599f76c601}{on\+Battery\+Level\+Received}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, uint8\+\_\+t level)
+void \textbf{ on\+Battery\+Level\+Received} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, uint8\+\_\+t level)
 \item 
-void \mbox{\hyperlink{class_data_collector_aff0d95e10b014c460bf859abd6a01f74}{on\+Rssi}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, int8\+\_\+t rssi)
+void \textbf{ on\+Rssi} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, int8\+\_\+t rssi)
 \item 
-void \mbox{\hyperlink{class_data_collector_a8e6ee72005537474eb45f2a9310fa540}{on\+Connect}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, myo\+::\+Firmware\+Version firmware\+Version)
+void \textbf{ on\+Connect} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp, myo\+::\+Firmware\+Version firmware\+Version)
 \item 
-void \mbox{\hyperlink{class_data_collector_a89d1d780cdf635c607707f90b0665d50}{on\+Disconnect}} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp)
+void \textbf{ on\+Disconnect} (myo\+::\+Myo $\ast$myo, uint64\+\_\+t timestamp)
 \item 
-myo\+::\+Quaternion$<$ float $>$ \mbox{\hyperlink{class_data_collector_a46a7e8adb8679fde1021fe89ed0d0be0}{get\+Rotation}} ()
+myo\+::\+Quaternion$<$ float $>$ \textbf{ get\+Rotation} ()
 \begin{DoxyCompactList}\small\item\em Gets rotation values. (updates automatically if class is conneced to myo\+::\+Hub) \end{DoxyCompactList}\item 
-myo\+::\+Vector3$<$ float $>$ \mbox{\hyperlink{class_data_collector_a04ad19d96b8574ff7c9f945cd1c5ddc6}{get\+Gyroscope}} ()
+myo\+::\+Vector3$<$ float $>$ \textbf{ get\+Gyroscope} ()
 \begin{DoxyCompactList}\small\item\em Gets the Gyroscope values. (updates automatically if class is conneced to myo\+::\+Hub) \end{DoxyCompactList}\item 
-myo\+::\+Vector3$<$ float $>$ \mbox{\hyperlink{class_data_collector_a1ef7a2beb37a42d4ac887fef90ac8947}{get\+Accelerometer}} ()
+myo\+::\+Vector3$<$ float $>$ \textbf{ get\+Accelerometer} ()
 \begin{DoxyCompactList}\small\item\em Gets all 8 E\+MG sensor Values. (updates automatically if class is conneced to myo\+::\+Hub) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_data_collector_a6994bc51d1e7cbcaeca954a4ba7f8103}{get\+E\+MG}} (std\+::array$<$ int8\+\_\+t, 8 $>$ $\ast$data)
+void \textbf{ get\+E\+MG} (std\+::array$<$ int8\+\_\+t, 8 $>$ $\ast$data)
 \begin{DoxyCompactList}\small\item\em Gets all 8 E\+MG sensor Values. (updates automatically if class is conneced to myo\+::\+Hub) \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_data_collector_a4e761ba292f93b5ac18e05a860a697ab}{get\+Rotation\+\_\+roll}} ()
+float \textbf{ get\+Rotation\+\_\+roll} ()
 \begin{DoxyCompactList}\small\item\em Calculated Roll from rotation data. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_data_collector_a603dbbfb9d59838c775f51e1e695e638}{get\+Rotation\+\_\+pitch}} ()
+float \textbf{ get\+Rotation\+\_\+pitch} ()
 \begin{DoxyCompactList}\small\item\em Calculated pitch from rotation data. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_data_collector_a45175c5352dd3870c2d1cf99c4b2d938}{get\+Rotation\+\_\+yaw}} ()
+float \textbf{ get\+Rotation\+\_\+yaw} ()
 \begin{DoxyCompactList}\small\item\em Calculated yaw from rotation data. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{class_data_collector_a376b4be3194c56e25084df4097968a46}{get\+Battery\+Level}} ()
+uint8\+\_\+t \textbf{ get\+Battery\+Level} ()
 \begin{DoxyCompactList}\small\item\em Battery\+: This value wont update periodically. update via M\+Y\+O\+::request\+Battery\+Level() \end{DoxyCompactList}\item 
-int8\+\_\+t \mbox{\hyperlink{class_data_collector_a4992b2e777defed813c7ce15a73bc84b}{get\+Bluetooth\+Range}} ()
+int8\+\_\+t \textbf{ get\+Bluetooth\+Range} ()
 \begin{DoxyCompactList}\small\item\em Bluetooth\+: This value wont update periodically. update via update via M\+Y\+O\+::request\+Rssi();. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_data_collector_a2dbac95176fb77c1714573e41ba4490f}{get\+Connection\+Status}} ()
+bool \textbf{ get\+Connection\+Status} ()
 \begin{DoxyCompactList}\small\item\em This value is automaticly updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Contains all device information about a Myo Bracelet. 
 
-
-Definition at line 14 of file Data\+Collector.\+h.
-
+It inherits all save data functions from myo\+::\+Device\+Listener, so to initalise the class from recieving data you have to put this line afer Myo initialisation\+: myo\+::hub.\+add\+Listener(\&datacollector); \begin{DoxyAuthor}{Author}
+Ryan Vrosch 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2018-\/11-\/30 
+\end{DoxyDate}
+\begin{DoxyWarning}{Warning}
+Some params dont update themselves, and need to be called via myo\+::\+Myo. 
+\end{DoxyWarning}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License. 
+\end{DoxyCopyright}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_data_collector_a6f7eccfdf026a83317c386a18d16397d}\label{class_data_collector_a6f7eccfdf026a83317c386a18d16397d}} 
+\mbox{\label{class_data_collector_a6f7eccfdf026a83317c386a18d16397d}} 
 \index{Data\+Collector@{Data\+Collector}!Data\+Collector@{Data\+Collector}}
 \index{Data\+Collector@{Data\+Collector}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{Data\+Collector()}{DataCollector()}}
+\subsubsection{Data\+Collector()}
 {\footnotesize\ttfamily Data\+Collector\+::\+Data\+Collector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 5 of file Data\+Collector.\+cpp.
-
-
-
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_data_collector_a1ef7a2beb37a42d4ac887fef90ac8947}\label{class_data_collector_a1ef7a2beb37a42d4ac887fef90ac8947}} 
+\mbox{\label{class_data_collector_a1ef7a2beb37a42d4ac887fef90ac8947}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Accelerometer@{get\+Accelerometer}}
 \index{get\+Accelerometer@{get\+Accelerometer}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Accelerometer()}{getAccelerometer()}}
+\subsubsection{get\+Accelerometer()}
 {\footnotesize\ttfamily myo\+::\+Vector3$<$float$>$ Data\+Collector\+::get\+Accelerometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -87,14 +101,10 @@ Gets all 8 E\+MG sensor Values. (updates automatically if class is conneced to m
 \begin{DoxyReturn}{Returns}
 accel myo\+::\+Vector3$<$float$>$ use raw value \+: .x() .y() .z(). 
 \end{DoxyReturn}
-
-
-Definition at line 59 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a376b4be3194c56e25084df4097968a46}\label{class_data_collector_a376b4be3194c56e25084df4097968a46}} 
+\mbox{\label{class_data_collector_a376b4be3194c56e25084df4097968a46}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Battery\+Level@{get\+Battery\+Level}}
 \index{get\+Battery\+Level@{get\+Battery\+Level}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Battery\+Level()}{getBatteryLevel()}}
+\subsubsection{get\+Battery\+Level()}
 {\footnotesize\ttfamily uint8\+\_\+t Data\+Collector\+::get\+Battery\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -104,14 +114,10 @@ Battery\+: This value wont update periodically. update via M\+Y\+O\+::request\+B
 \begin{DoxyReturn}{Returns}
 Battery Level in procentage. 
 \end{DoxyReturn}
-
-
-Definition at line 79 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a4992b2e777defed813c7ce15a73bc84b}\label{class_data_collector_a4992b2e777defed813c7ce15a73bc84b}} 
+\mbox{\label{class_data_collector_a4992b2e777defed813c7ce15a73bc84b}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Bluetooth\+Range@{get\+Bluetooth\+Range}}
 \index{get\+Bluetooth\+Range@{get\+Bluetooth\+Range}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Bluetooth\+Range()}{getBluetoothRange()}}
+\subsubsection{get\+Bluetooth\+Range()}
 {\footnotesize\ttfamily int8\+\_\+t Data\+Collector\+::get\+Bluetooth\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -121,14 +127,10 @@ Bluetooth\+: This value wont update periodically. update via update via M\+Y\+O\
 \begin{DoxyReturn}{Returns}
 bluetooth range 0-\/127. 
 \end{DoxyReturn}
-
-
-Definition at line 82 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a2dbac95176fb77c1714573e41ba4490f}\label{class_data_collector_a2dbac95176fb77c1714573e41ba4490f}} 
+\mbox{\label{class_data_collector_a2dbac95176fb77c1714573e41ba4490f}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Connection\+Status@{get\+Connection\+Status}}
 \index{get\+Connection\+Status@{get\+Connection\+Status}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Connection\+Status()}{getConnectionStatus()}}
+\subsubsection{get\+Connection\+Status()}
 {\footnotesize\ttfamily bool Data\+Collector\+::get\+Connection\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -138,14 +140,10 @@ This value is automaticly updated.
 \begin{DoxyReturn}{Returns}
 connection status (bool) true = Connected $\vert$ false = disconnected. 
 \end{DoxyReturn}
-
-
-Definition at line 85 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a6994bc51d1e7cbcaeca954a4ba7f8103}\label{class_data_collector_a6994bc51d1e7cbcaeca954a4ba7f8103}} 
+\mbox{\label{class_data_collector_a6994bc51d1e7cbcaeca954a4ba7f8103}} 
 \index{Data\+Collector@{Data\+Collector}!get\+E\+MG@{get\+E\+MG}}
 \index{get\+E\+MG@{get\+E\+MG}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+E\+M\+G()}{getEMG()}}
+\subsubsection{get\+E\+M\+G()}
 {\footnotesize\ttfamily void Data\+Collector\+::get\+E\+MG (\begin{DoxyParamCaption}\item[{std\+::array$<$ int8\+\_\+t, 8 $>$ $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -157,14 +155,10 @@ Gets all 8 E\+MG sensor Values. (updates automatically if class is conneced to m
 \mbox{\tt in,out}  & {\em data} & returns emg data if $\ast$data != null. \\
 \hline
 \end{DoxyParams}
-
-
-Definition at line 62 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a04ad19d96b8574ff7c9f945cd1c5ddc6}\label{class_data_collector_a04ad19d96b8574ff7c9f945cd1c5ddc6}} 
+\mbox{\label{class_data_collector_a04ad19d96b8574ff7c9f945cd1c5ddc6}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Gyroscope@{get\+Gyroscope}}
 \index{get\+Gyroscope@{get\+Gyroscope}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Gyroscope()}{getGyroscope()}}
+\subsubsection{get\+Gyroscope()}
 {\footnotesize\ttfamily myo\+::\+Vector3$<$float$>$ Data\+Collector\+::get\+Gyroscope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -174,14 +168,10 @@ Gets the Gyroscope values. (updates automatically if class is conneced to myo\+:
 \begin{DoxyReturn}{Returns}
 accel myo\+::\+Vector3$<$float$>$ use raw value \+: .x() .y() .z(). 
 \end{DoxyReturn}
-
-
-Definition at line 56 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a46a7e8adb8679fde1021fe89ed0d0be0}\label{class_data_collector_a46a7e8adb8679fde1021fe89ed0d0be0}} 
+\mbox{\label{class_data_collector_a46a7e8adb8679fde1021fe89ed0d0be0}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation@{get\+Rotation}}
 \index{get\+Rotation@{get\+Rotation}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Rotation()}{getRotation()}}
+\subsubsection{get\+Rotation()}
 {\footnotesize\ttfamily myo\+::\+Quaternion$<$float$>$ Data\+Collector\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -191,14 +181,10 @@ Gets rotation values. (updates automatically if class is conneced to myo\+::\+Hu
 \begin{DoxyReturn}{Returns}
 myo\+::\+Quaternion$<$float$>$ use raw value\+: .x() .y() .z() .w(). 
 \end{DoxyReturn}
-
-
-Definition at line 53 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a603dbbfb9d59838c775f51e1e695e638}\label{class_data_collector_a603dbbfb9d59838c775f51e1e695e638}} 
+\mbox{\label{class_data_collector_a603dbbfb9d59838c775f51e1e695e638}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation\+\_\+pitch@{get\+Rotation\+\_\+pitch}}
 \index{get\+Rotation\+\_\+pitch@{get\+Rotation\+\_\+pitch}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Rotation\+\_\+pitch()}{getRotation\_pitch()}}
+\subsubsection{get\+Rotation\+\_\+pitch()}
 {\footnotesize\ttfamily float Data\+Collector\+::get\+Rotation\+\_\+pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -208,14 +194,10 @@ Calculated pitch from rotation data.
 \begin{DoxyReturn}{Returns}
 Pitch in radial. 
 \end{DoxyReturn}
-
-
-Definition at line 71 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a4e761ba292f93b5ac18e05a860a697ab}\label{class_data_collector_a4e761ba292f93b5ac18e05a860a697ab}} 
+\mbox{\label{class_data_collector_a4e761ba292f93b5ac18e05a860a697ab}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation\+\_\+roll@{get\+Rotation\+\_\+roll}}
 \index{get\+Rotation\+\_\+roll@{get\+Rotation\+\_\+roll}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Rotation\+\_\+roll()}{getRotation\_roll()}}
+\subsubsection{get\+Rotation\+\_\+roll()}
 {\footnotesize\ttfamily float Data\+Collector\+::get\+Rotation\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -225,14 +207,10 @@ Calculated Roll from rotation data.
 \begin{DoxyReturn}{Returns}
 Roll in radial. 
 \end{DoxyReturn}
-
-
-Definition at line 68 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_a45175c5352dd3870c2d1cf99c4b2d938}\label{class_data_collector_a45175c5352dd3870c2d1cf99c4b2d938}} 
+\mbox{\label{class_data_collector_a45175c5352dd3870c2d1cf99c4b2d938}} 
 \index{Data\+Collector@{Data\+Collector}!get\+Rotation\+\_\+yaw@{get\+Rotation\+\_\+yaw}}
 \index{get\+Rotation\+\_\+yaw@{get\+Rotation\+\_\+yaw}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{get\+Rotation\+\_\+yaw()}{getRotation\_yaw()}}
+\subsubsection{get\+Rotation\+\_\+yaw()}
 {\footnotesize\ttfamily float Data\+Collector\+::get\+Rotation\+\_\+yaw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -242,93 +220,57 @@ Calculated yaw from rotation data.
 \begin{DoxyReturn}{Returns}
 Yaw in radial. 
 \end{DoxyReturn}
-
-
-Definition at line 74 of file Data\+Collector.\+h.
-
-\mbox{\Hypertarget{class_data_collector_af284c1bda701eb04d8278848672a1be6}\label{class_data_collector_af284c1bda701eb04d8278848672a1be6}} 
+\mbox{\label{class_data_collector_af284c1bda701eb04d8278848672a1be6}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Accelerometer\+Data@{on\+Accelerometer\+Data}}
 \index{on\+Accelerometer\+Data@{on\+Accelerometer\+Data}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Accelerometer\+Data()}{onAccelerometerData()}}
+\subsubsection{on\+Accelerometer\+Data()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Accelerometer\+Data (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{const myo\+::\+Vector3$<$ float $>$ \&}]{accel }\end{DoxyParamCaption})}
 
-
-
-Definition at line 31 of file Data\+Collector.\+cpp.
-
-\mbox{\Hypertarget{class_data_collector_a56a6c61925d54439459fc1599f76c601}\label{class_data_collector_a56a6c61925d54439459fc1599f76c601}} 
+\mbox{\label{class_data_collector_a56a6c61925d54439459fc1599f76c601}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Battery\+Level\+Received@{on\+Battery\+Level\+Received}}
 \index{on\+Battery\+Level\+Received@{on\+Battery\+Level\+Received}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Battery\+Level\+Received()}{onBatteryLevelReceived()}}
+\subsubsection{on\+Battery\+Level\+Received()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Battery\+Level\+Received (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{uint8\+\_\+t}]{level }\end{DoxyParamCaption})}
 
-
-
-Definition at line 52 of file Data\+Collector.\+cpp.
-
-\mbox{\Hypertarget{class_data_collector_a8e6ee72005537474eb45f2a9310fa540}\label{class_data_collector_a8e6ee72005537474eb45f2a9310fa540}} 
+\mbox{\label{class_data_collector_a8e6ee72005537474eb45f2a9310fa540}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Connect@{on\+Connect}}
 \index{on\+Connect@{on\+Connect}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Connect()}{onConnect()}}
+\subsubsection{on\+Connect()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Connect (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{myo\+::\+Firmware\+Version}]{firmware\+Version }\end{DoxyParamCaption})}
 
-
-
-Definition at line 64 of file Data\+Collector.\+cpp.
-
-\mbox{\Hypertarget{class_data_collector_a89d1d780cdf635c607707f90b0665d50}\label{class_data_collector_a89d1d780cdf635c607707f90b0665d50}} 
+\mbox{\label{class_data_collector_a89d1d780cdf635c607707f90b0665d50}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Disconnect@{on\+Disconnect}}
 \index{on\+Disconnect@{on\+Disconnect}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Disconnect()}{onDisconnect()}}
+\subsubsection{on\+Disconnect()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Disconnect (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp }\end{DoxyParamCaption})}
 
-
-
-Definition at line 70 of file Data\+Collector.\+cpp.
-
-\mbox{\Hypertarget{class_data_collector_a43639de09ccb9c540a3d21d267e7460a}\label{class_data_collector_a43639de09ccb9c540a3d21d267e7460a}} 
+\mbox{\label{class_data_collector_a43639de09ccb9c540a3d21d267e7460a}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Emg\+Data@{on\+Emg\+Data}}
 \index{on\+Emg\+Data@{on\+Emg\+Data}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Emg\+Data()}{onEmgData()}}
+\subsubsection{on\+Emg\+Data()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Emg\+Data (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{const int8\+\_\+t $\ast$}]{emg }\end{DoxyParamCaption})}
 
-
-
-Definition at line 43 of file Data\+Collector.\+cpp.
-
-\mbox{\Hypertarget{class_data_collector_a46ee5fda02554a8d84a0f449026dcfac}\label{class_data_collector_a46ee5fda02554a8d84a0f449026dcfac}} 
+\mbox{\label{class_data_collector_a46ee5fda02554a8d84a0f449026dcfac}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Gyroscope\+Data@{on\+Gyroscope\+Data}}
 \index{on\+Gyroscope\+Data@{on\+Gyroscope\+Data}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Gyroscope\+Data()}{onGyroscopeData()}}
+\subsubsection{on\+Gyroscope\+Data()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Gyroscope\+Data (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{const myo\+::\+Vector3$<$ float $>$ \&}]{gyro }\end{DoxyParamCaption})}
 
-
-
-Definition at line 37 of file Data\+Collector.\+cpp.
-
-\mbox{\Hypertarget{class_data_collector_a7e54df882eed064e4059b3361dff796f}\label{class_data_collector_a7e54df882eed064e4059b3361dff796f}} 
+\mbox{\label{class_data_collector_a7e54df882eed064e4059b3361dff796f}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Orientation\+Data@{on\+Orientation\+Data}}
 \index{on\+Orientation\+Data@{on\+Orientation\+Data}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Orientation\+Data()}{onOrientationData()}}
+\subsubsection{on\+Orientation\+Data()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Orientation\+Data (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{const myo\+::\+Quaternion$<$ float $>$ \&}]{rotation }\end{DoxyParamCaption})}
 
-
-
-Definition at line 17 of file Data\+Collector.\+cpp.
-
-\mbox{\Hypertarget{class_data_collector_aff0d95e10b014c460bf859abd6a01f74}\label{class_data_collector_aff0d95e10b014c460bf859abd6a01f74}} 
+\mbox{\label{class_data_collector_aff0d95e10b014c460bf859abd6a01f74}} 
 \index{Data\+Collector@{Data\+Collector}!on\+Rssi@{on\+Rssi}}
 \index{on\+Rssi@{on\+Rssi}!Data\+Collector@{Data\+Collector}}
-\subsubsection{\texorpdfstring{on\+Rssi()}{onRssi()}}
+\subsubsection{on\+Rssi()}
 {\footnotesize\ttfamily void Data\+Collector\+::on\+Rssi (\begin{DoxyParamCaption}\item[{myo\+::\+Myo $\ast$}]{myo,  }\item[{uint64\+\_\+t}]{timestamp,  }\item[{int8\+\_\+t}]{rssi }\end{DoxyParamCaption})}
-
-
-
-Definition at line 58 of file Data\+Collector.\+cpp.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_data_collector_8h}{Data\+Collector.\+h}}\item 
-\mbox{\hyperlink{_data_collector_8cpp}{Data\+Collector.\+cpp}}\end{DoxyCompactItemize}
+\textbf{ Data\+Collector.\+h}\item 
+\textbf{ Data\+Collector.\+cpp}\end{DoxyCompactItemize}

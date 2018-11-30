@@ -49,11 +49,8 @@ bool Communicator::Write(const char *message, int messageLength)
 	unsigned long nBytesWritten;
 
 	WriteFile(COM_Handler, message, messageLength, &nBytesWritten, NULL);
-
-	if (nBytesWritten == messageLength)
-	{
-		return true;
-	}
+	if (nBytesWritten == messageLength)	return true;
+	
 	return false;
 }
 

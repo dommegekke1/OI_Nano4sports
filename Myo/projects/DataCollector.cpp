@@ -4,12 +4,12 @@
 
 DataCollector::DataCollector()
 {
-	connectionStatus = false;
-	rotation_roll = 0;
-	rotation_pitch = 0;
-	rotation_yaw = 0;
-	batteryLevel = 0;
-	BluetoothRange = 0;
+	connectionStatus	= false;
+	rotation_roll		= 0;
+	rotation_pitch		= 0;
+	rotation_yaw		= 0;
+	batteryLevel		= 0;
+	BluetoothRange		= 0;
 	EMG.empty();
 }
 

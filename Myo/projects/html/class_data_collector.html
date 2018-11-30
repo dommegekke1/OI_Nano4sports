@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: DataCollector Class Reference</title>
+<title>Myo bracelet Connector: DataCollector Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Myo bracelet Connector
    </div>
   </td>
  </tr>
@@ -68,6 +68,9 @@ $(function() {
 <div class="title">DataCollector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains all device information about a Myo Bracelet.  
+ <a href="class_data_collector.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -131,8 +134,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2dbac95176fb77c1714573e41ba4490f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00014">14</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
+<div class="textblock"><p>Contains all device information about a Myo Bracelet. </p>
+<p>It inherits all save data functions from myo::DeviceListener, so to initalise the class from recieving data you have to put this line afer Myo initialisation: myo::hub.addListener(&amp;datacollector); </p><dl class="section author"><dt>Author</dt><dd>Ryan Vrosch </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2018-11-30 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Some params dont update themselves, and need to be called via myo::Myo. </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f7eccfdf026a83317c386a18d16397d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f7eccfdf026a83317c386a18d16397d">&#9670;&nbsp;</a></span>DataCollector()</h2>
@@ -148,8 +155,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00005">5</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
 
 </div>
 </div>
@@ -180,8 +185,6 @@ Public Member Functions</h2></td></tr>
 <p>Gets all 8 EMG sensor Values. (updates automatically if class is conneced to myo::Hub) </p>
 <dl class="section return"><dt>Returns</dt><dd>accel myo::Vector3&lt;float&gt; use raw value : .x() .y() .z(). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00059">59</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
-
 </div>
 </div>
 <a id="a376b4be3194c56e25084df4097968a46"></a>
@@ -209,8 +212,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Battery: This value wont update periodically. update via MYO::requestBatteryLevel() </p>
 <dl class="section return"><dt>Returns</dt><dd>Battery Level in procentage. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00079">79</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
 
 </div>
 </div>
@@ -240,8 +241,6 @@ Public Member Functions</h2></td></tr>
 <p>Bluetooth: This value wont update periodically. update via update via MYO::requestRssi();. </p>
 <dl class="section return"><dt>Returns</dt><dd>bluetooth range 0-127. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00082">82</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
-
 </div>
 </div>
 <a id="a2dbac95176fb77c1714573e41ba4490f"></a>
@@ -269,8 +268,6 @@ Public Member Functions</h2></td></tr>
 
 <p>This value is automaticly updated. </p>
 <dl class="section return"><dt>Returns</dt><dd>connection status (bool) true = Connected | false = disconnected. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00085">85</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
 
 </div>
 </div>
@@ -306,8 +303,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00062">62</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
-
 </div>
 </div>
 <a id="a04ad19d96b8574ff7c9f945cd1c5ddc6"></a>
@@ -335,8 +330,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the Gyroscope values. (updates automatically if class is conneced to myo::Hub) </p>
 <dl class="section return"><dt>Returns</dt><dd>accel myo::Vector3&lt;float&gt; use raw value : .x() .y() .z(). </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00056">56</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
 
 </div>
 </div>
@@ -366,8 +359,6 @@ Public Member Functions</h2></td></tr>
 <p>Gets rotation values. (updates automatically if class is conneced to myo::Hub) </p>
 <dl class="section return"><dt>Returns</dt><dd>myo::Quaternion&lt;float&gt; use raw value: .x() .y() .z() .w(). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00053">53</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
-
 </div>
 </div>
 <a id="a603dbbfb9d59838c775f51e1e695e638"></a>
@@ -395,8 +386,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Calculated pitch from rotation data. </p>
 <dl class="section return"><dt>Returns</dt><dd>Pitch in radial. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00071">71</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
 
 </div>
 </div>
@@ -426,8 +415,6 @@ Public Member Functions</h2></td></tr>
 <p>Calculated Roll from rotation data. </p>
 <dl class="section return"><dt>Returns</dt><dd>Roll in radial. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00068">68</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
-
 </div>
 </div>
 <a id="a45175c5352dd3870c2d1cf99c4b2d938"></a>
@@ -455,8 +442,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Calculated yaw from rotation data. </p>
 <dl class="section return"><dt>Returns</dt><dd>Yaw in radial. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8h_source.html#l00074">74</a> of file <a class="el" href="_data_collector_8h_source.html">DataCollector.h</a>.</p>
 
 </div>
 </div>
@@ -492,8 +477,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00031">31</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
-
 </div>
 </div>
 <a id="a56a6c61925d54439459fc1599f76c601"></a>
@@ -527,8 +510,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00052">52</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
 
 </div>
 </div>
@@ -564,8 +545,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00064">64</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
-
 </div>
 </div>
 <a id="a89d1d780cdf635c607707f90b0665d50"></a>
@@ -593,8 +572,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00070">70</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
 
 </div>
 </div>
@@ -630,8 +607,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00043">43</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
-
 </div>
 </div>
 <a id="a46ee5fda02554a8d84a0f449026dcfac"></a>
@@ -665,8 +640,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00037">37</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
 
 </div>
 </div>
@@ -702,8 +675,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00017">17</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
-
 </div>
 </div>
 <a id="aff0d95e10b014c460bf859abd6a01f74"></a>
@@ -738,13 +709,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_collector_8cpp_source.html#l00058">58</a> of file <a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_data_collector_8h_source.html">DataCollector.h</a></li>
-<li><a class="el" href="_data_collector_8cpp_source.html">DataCollector.cpp</a></li>
+<li><a class="el" href="_data_collector_8cpp.html">DataCollector.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

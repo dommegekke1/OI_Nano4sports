@@ -1,19 +1,16 @@
+
 #include "PeakDetector.h"
 #include <algorithm>
 #include <vector>
 
-
-
-
-
 ///
-/// \brief Peakdetector detects peaks in realtime signals by calculating the direction of the signal.
+/// @brief initialises all sample settings.
 ///
-/// \param measureLength				Length of the sampling array, has to be an even number.
-/// \param minimumSampleDifference		If The sample is lower then previous sampleDifference the sample is discarded.
-/// \param minimumPeakThreshold			Minimum Threshold relative to Peakoffset. If Sample is lower than Peakthreshold 
+/// @param measureLength				Length of the sampling array, has to be an even number.
+/// @param minimumSampleDifference		If The sample is lower then previous sampleDifference the sample is discarded.
+/// @param minimumPeakThreshold			Minimum Threshold relative to Peakoffset. If Sample is lower than Peakthreshold 
 ///										no peak will be detected. this value is the same for positive and negative samples.
-/// \param mimimumPeakOffset			Sets the baseline of the peakthreshold. 		
+/// @param mimimumPeakOffset			Sets the baseline of the peakthreshold. 		
 ///
 template <class T>
 PeakDetector<T>::PeakDetector(int measureLength, T minimumSampleDifference, T minimumPeakThreshold, T mimimumPeakOffset)
@@ -40,14 +37,14 @@ PeakDetector<T>::~PeakDetector()
 {
 }
 
-/// \brief Call Calculate(T sample) before Getting the peakvalue.
+/// @brief Call Calculate(T sample) before Getting the peakvalue.
 template <class T>
 PeakType PeakDetector<T>::GetPeak()
 {
 	return peak;
 }
 
-/// \brief Call Calculate(T sample) before Getting the RawPeekValue.
+/// @brief Call Calculate(T sample) before Getting the RawPeekValue.
 template <class T>
 T PeakDetector<T>::GetRawPeekValue()
 {
@@ -55,8 +52,8 @@ T PeakDetector<T>::GetRawPeekValue()
 }
 
 
-/// \brief Calculates the signal if a direction is detected. use GetPeak() to see if a peak is detected.
-/// \param sample signal to calculate 	
+/// @brief Calculates the signal if a direction is detected. use GetPeak() to see if a peak is detected.
+/// @param sample signal to calculate 	
 template <class T>
 void PeakDetector<T>::Calculate(T sample)
 {
@@ -89,7 +86,7 @@ void PeakDetector<T>::Calculate(T sample)
     }
 }
 
-/// \brief Adds all values of an Vector together
+/// @brief Adds all values of an Vector together
 template <class T>
 int PeakDetector<T>::Total(std::vector<int> array, size_t arrayLength)
 {
@@ -102,6 +99,12 @@ int PeakDetector<T>::Total(std::vector<int> array, size_t arrayLength)
 }
 
 
+/*
+Code that invokes template functions must have matching
+template function declarations. Declarations must include
+the same template parameters as the definition. The following
+sample generates LNK2019 on a user-defined operator, and shows
+how to fix it.*/
 template class PeakDetector<int>;
 template class PeakDetector<unsigned int>;
 template class PeakDetector<float>;
