@@ -37,20 +37,21 @@ namespace MyoVisualizedApp
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedAxis2 = comboBox2.SelectedText;
+            SelectedAxis2 = comboBox2.Text;
             dataGraph.Series["Series2"].Points.Clear();
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedAxis3 = comboBox3.SelectedText;
+            SelectedAxis3 = comboBox3.Text;
             dataGraph.Series["Series3"].Points.Clear();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedAxis1 = comboBox1.SelectedText;
+            SelectedAxis1 = comboBox1.Text;
             dataGraph.Series["Series1"].Points.Clear();
+            label2.Text = SelectedAxis1;
         }
 
         public int EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7;
@@ -117,12 +118,14 @@ namespace MyoVisualizedApp
                 Int32.TryParse(singleLine[17], out time);
 
                 Sample sampleData = new Sample(roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7, time);
-                
+
+                label3.Text = sampleData.EMG0 + "";
                 dataGraph.ChartAreas[0].AxisX.Minimum = sampleData.time - 4000;
                 dataGraph.ChartAreas[1].AxisX.Minimum = sampleData.time - 4000;
                 dataGraph.ChartAreas[2].AxisX.Minimum = sampleData.time - 4000;
 
                 simTimer += 10;
+                /*
                 if(simTimer > 5000)
                 {
                     dataGraph.Series[0].Points.RemoveAt(5);
@@ -142,13 +145,14 @@ namespace MyoVisualizedApp
                     }
                     simTimer = 0;
                 }
+                */
                 //selecting the right graph for the right axis
                 switch (SelectedAxis1)
                 {
                     case "Roll":
                         dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.roll);
                         break;
-                    case "Ptch":
+                    case "Pitch":
                         dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.pitch);
                         break;
                     case "Yaw":
@@ -204,7 +208,7 @@ namespace MyoVisualizedApp
                     case "Roll":
                         dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.roll);
                         break;
-                    case "Ptch":
+                    case "Pitch":
                         dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.pitch);
                         break;
                     case "Yaw":
@@ -255,12 +259,12 @@ namespace MyoVisualizedApp
                     default:
                         break;
                 }
-                switch (SelectedAxis2)
+                switch (SelectedAxis3)
                 {
                     case "Roll":
                         dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.roll);
                         break;
-                    case "Ptch":
+                    case "Pitch":
                         dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.pitch);
                         break;
                     case "Yaw":
