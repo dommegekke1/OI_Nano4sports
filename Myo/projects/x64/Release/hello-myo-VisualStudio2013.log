@@ -1,3 +1,9 @@
-﻿  hello-myo-VisualStudio2013.vcxproj -> C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo\projects\x64\Release\Nano4Sports.exe
+﻿  Myo.cpp
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(39): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): warning C4297: 'myo::ThrowOnError::~ThrowOnError': function assumed not to throw an exception but does
+  c:\users\ryanv\onedrive\bureaublad\git\oi\oi_nano4sports_goede\oi_nano4sports\myo\include\myo\cxx\detail\throwonerror.hpp(45): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
+  hello-myo-VisualStudio2013.vcxproj -> C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo\projects\x64\Release\Nano4Sports.exe
   Copy required dlls to output directory
           1 file(s) copied.

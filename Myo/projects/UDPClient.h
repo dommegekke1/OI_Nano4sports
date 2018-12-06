@@ -13,6 +13,14 @@
  *  @version   1.0
  *  @date      2018-11-30
  *  @copyright GNU Public License.
+=======
+/*!
+ *  @brief     Sets up a udp client connection to send char[].
+ *  @author    Jens Verstappen & Ryan Vrosch 
+ *  @version   1.0
+ *  @date      2018-11-30
+ *  @copyright GNU Public License.
+>>>>>>> Develop
  */
 class UDPClient
 {
