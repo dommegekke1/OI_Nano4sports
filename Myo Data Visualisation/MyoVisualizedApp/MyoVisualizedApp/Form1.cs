@@ -54,7 +54,7 @@ namespace MyoVisualizedApp
             label2.Text = SelectedAxis1;
         }
 
-        public int EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7;
+        public int EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7, stepDetect, muscleTension;
 
         int simTimer = 0;
 
@@ -115,9 +115,11 @@ namespace MyoVisualizedApp
                 int.TryParse(singleLine[14], out EMG5);
                 int.TryParse(singleLine[15], out EMG6);
                 int.TryParse(singleLine[16], out EMG7);
-                Int32.TryParse(singleLine[17], out time);
+                int.TryParse(singleLine[17], out stepDetect);
+                int.TryParse(singleLine[18], out muscleTension);
+                Int32.TryParse(singleLine[19], out time);
 
-                Sample sampleData = new Sample(roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7, time);
+                Sample sampleData = new Sample(roll, pitch, yaw, gyro_x, gyro_y, gyro_z, accel_x, accel_y, accel_z, EMG0, EMG1, EMG2, EMG3, EMG4, EMG5, EMG6, EMG7, stepDetect, muscleTension, time);
 
                 label3.Text = sampleData.EMG0 + "";
                 dataGraph.ChartAreas[0].AxisX.Minimum = sampleData.time - 4000;
@@ -200,6 +202,12 @@ namespace MyoVisualizedApp
                     case "EMG_7":
                         dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.EMG7);
                         break;
+                    case "StepDetect":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.stepDetect);
+                        break;
+                    case "MuscleTension":
+                        dataGraph.Series["Series1"].Points.AddXY(sampleData.time, sampleData.muscleTension);
+                        break;
                     default:
                         break;
                 }
@@ -256,6 +264,12 @@ namespace MyoVisualizedApp
                     case "EMG_7":
                         dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.EMG7);
                         break;
+                    case "StepDetect":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.stepDetect);
+                        break;
+                    case "MuscleTension":
+                        dataGraph.Series["Series2"].Points.AddXY(sampleData.time, sampleData.muscleTension);
+                        break;
                     default:
                         break;
                 }
@@ -311,6 +325,12 @@ namespace MyoVisualizedApp
                         break;
                     case "EMG_7":
                         dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.EMG7);
+                        break;
+                    case "StepDetect":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.stepDetect);
+                        break;
+                    case "MuscleTension":
+                        dataGraph.Series["Series3"].Points.AddXY(sampleData.time, sampleData.muscleTension);
                         break;
                     default:
                         break;
