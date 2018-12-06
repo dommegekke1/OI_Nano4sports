@@ -113,3 +113,23 @@ C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sport
 C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\timho\Google Drive\school\Semester 3\Open Innovation\code\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CopyComplete
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe.config
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.exe
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\MyoVisualizedApp.pdb
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.dll
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Geared.dll
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.pdb
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.xml
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Form1.resources
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.Properties.Resources.resources
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.GenerateResource.cache
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CoreCompileInputs.cache
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.csproj.CopyComplete
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.exe
+C:\Users\ryanv\OneDrive\Bureaublad\GIT\OI\OI_Nano4Sports_goede\OI_Nano4sports\Myo Data Visualisation\MyoVisualizedApp\MyoVisualizedApp\obj\Debug\MyoVisualizedApp.pdb

@@ -23,11 +23,11 @@ namespace UDPRec
         private void Start()
         {
             //Create the server.
-            IPEndPoint serverEnd = new IPEndPoint(IPAddress.Any, 1111);
+            IPEndPoint serverEnd = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1111);
             _server = new UdpClient(serverEnd);
             System.Windows.Forms.MessageBox.Show("Waiting for a client...");
             //Create the client end.
-            _client = new IPEndPoint(IPAddress.Any, 0);
+            _client = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 0);
 
             //Start listening.
             Thread listenThread = new Thread(new ThreadStart(Listening));

@@ -91,6 +91,7 @@ namespace MyoVisualizedApp
             {
                 label1.Text = server.receivedMessage;
 
+                /*
                 //Read data from COM
                 //string DataLineLive = serialPort.ReadLine();
 
@@ -127,27 +128,6 @@ namespace MyoVisualizedApp
                 dataGraph.ChartAreas[2].AxisX.Minimum = sampleData.time - 4000;
 
                 simTimer += 10;
-                /*
-                if(simTimer > 5000)
-                {
-                    dataGraph.Series[0].Points.RemoveAt(5);
-                    dataGraph.Series[1].Points.RemoveAt(5);
-                    dataGraph.Series[2].Points.RemoveAt(5);
-
-                    dataGraph.Series[0].Points.RemoveAt(15);
-                    dataGraph.Series[1].Points.RemoveAt(15);
-                    dataGraph.Series[2].Points.RemoveAt(15);
-                    label3.Text = dataGraph.Series[0].Points.Count.ToString();
-                    if (dataGraph.Series[0].Points.Count > 3000)
-                    {
-                        foreach (var series in dataGraph.Series)
-                        {
-                            series.Points.Clear();
-                        }
-                    }
-                    simTimer = 0;
-                }
-                */
                 //selecting the right graph for the right axis
                 switch (SelectedAxis1)
                 {
@@ -335,7 +315,7 @@ namespace MyoVisualizedApp
                     default:
                         break;
                 }
-                
+                */
             }
             else
             {
