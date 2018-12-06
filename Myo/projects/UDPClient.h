@@ -7,7 +7,6 @@
 
 #pragma comment (lib, "ws2_32.lib")
 
-<<<<<<< HEAD
 /*!
  *  @brief     Sets up a udp client connection to send char[].
  *  @author    Jens Verstappen & Ryan Vrosch 
